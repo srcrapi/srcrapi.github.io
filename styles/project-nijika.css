@@ -1,0 +1,108 @@
+h3 {
+  margin-top: 30px;
+  color: var(--secondary-color);
+}
+
+.author-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.author-image span {
+  font-size: 1.3em;
+  color: #7f849c;
+  margin-bottom: 70px;
+  font-weight: 700;
+}
+
+.author-image img {
+  margin: 20px 0 20px 0;
+  width: 80px;
+  border: 5px solid rgba(152, 152, 255, 0.332);
+  border-radius: 155px;
+}
+
+.project-nijika .nijika-wallpaper,
+.project-nijika .nijika-example {
+  padding: 3em;
+  width: 45vw;
+  border-radius: 65px;
+}
+
+.project-nijika .nijika-example {
+  padding: 1.5em;
+  border-radius: 30px;
+}
+
+.project-nijika .information {
+  color: var(--cinza);
+}
+
+.project-nijika .left {
+  padding: 3px 0 15px 0;
+  width: 57%;
+}
+
+.project-nijika ul {
+  list-style-type: none;
+  width: 47%;
+}
+
+.project-nijika {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nijika-wallpaper,
+.nijika-anjo,
+.github-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-nijika .nijika-anjo {
+  width: 30vw;
+  border-radius: 20px;
+}
+
+.project-nijika h2 {
+  color: white;
+  padding: 2em 0 2em 0;
+  margin-top: 45px;
+}
+
+.project-nijika p {
+  color: white;
+  width: 57%;
+  text-align: justify;
+  padding: 1em;
+}
+
+.project-nijika code {
+  text-align: justify;
+  width: 50%;
+}
+
+.project-nijika code {
+  background-color: var(--cinza-code);
+  border-radius: 8px;
+}
+
+.project-nijika code p {
+  color: var(--ryo-color-light);
+  font-size: 1.2em;
+  width: 100%;
+}
+
+.github-logo-img {
+  width: 60px;
+}
+
+.margem-logo {
+  margin-top: 60px;
+}
