@@ -9,6 +9,7 @@
 :root {
   --ryo_color: rgb(145, 152, 255);
   --cinza: rgb(75, 74, 74);
+  --dark-cinza: rgb(55, 54, 54);
   --cinza-code: rgb(43, 44, 49);
   --secondary-color: #fff;
   --ryo-color-light: rgb(202, 205, 255);
@@ -31,31 +32,51 @@ video {
   width: 700px;
 }
 
-.container {
+header {
+  padding: 15px;
+  border-radius: 7px;
+  margin: 15px 15px 0 15px;
+  background-color: var(--dark-cinza);
+}
+
+.home,
+.navbar ul,
+.navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 2% 32% 0% 32%;
-  padding: 2em;
-  background-color: #1e1d1d;
-  border-radius: 15px;
 }
 
-.container-fluid {
-  padding: 0 15px 0 15px;
-  margin: 15px auto 0 auto;
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-bar a {
+.navbar ul li a {
+  padding: 8px 16px;
+}
+
+.navbar a {
   font-weight: 700;
   text-decoration: none;
   line-height: 20px;
   color: var(--secondary-color);
 }
 
-.nav-bar a:hover {
+.navbar a:hover {
   color: var(--ryo-color-light);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 6% 32% 6% 32%;
+  padding: 2em 0;
+  background-color: #1e1d1d;
+  border-radius: 15px;
 }
 
 #title {
@@ -70,7 +91,7 @@ video {
 /* Index */
 
 .guide-menu img {
-  width: 250px;
+  width: 230px;
   border: 7px solid rgba(152, 152, 255, 0.332);
   border-radius: 155px;
   transition: transform 1s ease;
@@ -94,26 +115,6 @@ video {
   font-size: 1em;
   margin-bottom: 1.4em;
   color: var(--cinza);
-}
-
-.pages a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0.2em;
-  text-decoration: none;
-  font-size: 1.5em;
-  font-weight: 800;
-  color: white;
-}
-
-.pages a:hover {
-  color: #b0abab;
-}
-
-.pages .page-about {
-  margin-top: 10px;
 }
 
 /* About */
@@ -223,7 +224,7 @@ video {
 
 .friends .wallpaper {
   padding: 3em;
-  width: 45vw;
+  width: 60vw;
   border-radius: 65px;
 }
 
