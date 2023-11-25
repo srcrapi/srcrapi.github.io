@@ -62,18 +62,36 @@ header {
 }
 
 .navbar ul li a {
-  padding: 8px 16px;
+  margin: 8px 16px;
 }
 
 .navbar a {
   font-weight: 700;
   text-decoration: none;
-  line-height: 20px;
+  line-height: 15px;
   color: var(--secondary-color);
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
 }
 
 .navbar a:hover {
   opacity: 0.7;
+}
+
+.navbar a:hover::after {
+  width: 100%;
 }
 
 .container {
@@ -272,29 +290,27 @@ h1 {
 }
 
 .friends p {
-  color: var(--cinza);
+  color: var(--dark-cinza);
 }
 
 .friends a,
-.brother-rovier,
-.friend-celvet {
-  width: 10vw;
-  border-radius: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.friend-celvet,
+.rovier-brother img {
+  width: 9vw;
+  border-radius: 50%;
   margin: auto;
   margin-top: 15px;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   transition: transform 0.3s ease;
 }
 
-.friends a:hover,
-.brother-rovier:hover,
-.friend-celvet:hover {
+.friends a:hover {
   transform: scale(1.1);
-  border-radius: 70px;
+  border-radius: 50%;
 }
 
 /* Projects */
@@ -312,7 +328,7 @@ h1 {
 }
 
 .container-nijika:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .nijika-left a {
@@ -346,6 +362,11 @@ h1 {
 .social-media li {
   margin-left: 20px;
   margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-media li:hover {
+  transform: translateY(-7px);
 }
 
 .social-media li a i::before {
@@ -358,7 +379,8 @@ h1 {
 
 .social-media li a:hover i::before,
 .social-media li a:hover i::after {
-  color: rgb(231, 230, 230);
+  color: rgb(255, 255, 255);
+  transform: translateY(35px);
 }
 
 .social-media {
