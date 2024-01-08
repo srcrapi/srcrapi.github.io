@@ -29,8 +29,10 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--ryo-color-dark);
 }
+
 .background-image {
-  background-image: url(/assets/img/background_image/ryo-city.png);
+  min-height: 100svh;
+  background-image: url(/assets/img/background_image/background-desktop.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -45,6 +47,10 @@ header {
   border-radius: 7px;
   margin: 15px 15px 0 15px;
   background-color: var(--dark-cinza);
+}
+
+main {
+  position: relative;
 }
 
 .home,
@@ -236,6 +242,11 @@ header {
 .projects-section img {
   margin-top: 25px;
   width: 100px;
+  transition: all 0.3s ease;
+}
+
+.projects-section img:hover {
+  transform: translateY(-3px);
 }
 
 .favorite-anime,
@@ -271,7 +282,7 @@ header {
 }
 
 .friends .wallpaper {
-  padding: 3em;
+  padding: 3rem;
   width: 60vw;
   border-radius: 65px;
 }
@@ -296,15 +307,16 @@ h1 {
 .friends a,
 .friend-celvet,
 .rovier-brother img {
-  width: 9vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 150px;
   border-radius: 50%;
   margin: auto;
   margin-top: 15px;
   margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+
   transition: transform 0.3s ease;
 }
 
@@ -315,39 +327,69 @@ h1 {
 
 /* Projects */
 
-.container-nijika {
+.container-projects {
+  --_trasition-container-project-duration: var(
+    --transition-container-project-duration,
+    0.7s
+  );
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 1em;
-  margin: 0 20% 0 20%;
+  margin: auto;
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: 25px;
   background-color: #222222;
   border-radius: 15px;
-  transition: transform 0.5s ease;
-  margin-bottom: 25px;
+  opacity: 0.97;
+
+  transition: all var(--_trasition-container-project-duration) ease;
 }
 
-.container-nijika:hover {
-  transform: scale(1.05);
+.container-projects:hover {
+  transform: scale(1.04);
+  --transition-container-project-duration: 1s;
 }
 
-.nijika-left a {
+.projects-left a {
   text-decoration: none;
 }
 
-.nijika-left p {
+.projects-left p {
   color: white;
   padding-top: 2em;
 }
 
-.nijika-left h1:hover {
+.projects-left h1:hover {
   color: var(--ryo_color);
 }
 
-.nijika-right img {
+.projects-right img {
   padding-left: 2em;
   width: 300px;
   border-radius: 35px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer .copyright {
+  text-align: center;
+  color: white;
+}
+
+footer .copyright a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .copyright a:hover {
+  color: var(--ryo_color);
 }
 
 /* Social Medias */
@@ -356,6 +398,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
   list-style-type: none;
 }
 
@@ -366,7 +410,7 @@ h1 {
 }
 
 .social-media li:hover {
-  transform: translateY(-7px);
+  transform: translateY(-4px);
 }
 
 .social-media li a i::before {
@@ -377,19 +421,6 @@ h1 {
   padding: 7px;
 }
 
-.social-media li a:hover i::before,
-.social-media li a:hover i::after {
-  color: rgb(255, 255, 255);
-  transform: translateY(35px);
-}
-
-.social-media {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 25px;
-}
-
 .go-back {
   padding: 0.7em;
   text-decoration: none;
@@ -397,16 +428,70 @@ h1 {
   color: var(--ryo-color-light);
   border-radius: 10px;
   background-color: var(--button-color);
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .go-back:hover {
   background-color: var(--button-color-hover);
 }
 
-@media screen and (max-width: 600px) {
+@media (width <= 1000px) {
   .background-image {
-    background-image: none;
+    background-image: url(../assets/img/background_image/background-tablet-large.jpg);
+  }
+
+  .guide-menu {
+    margin: 5% 32% 3% 32%;
+  }
+}
+
+@media (width <= 750px) {
+  .background-image {
+    background-image: url(../assets/img/background_image/background-tablet.jpg);
+  }
+
+  footer .copyright,
+  footer .copyright a {
+    color: #474a58;
+  }
+
+  .guide-menu {
+    margin: 5% 25% 3% 25%;
+  }
+}
+
+@media (width <= 500px) {
+  .container-projects {
+    flex-direction: column;
+    max-width: 340px;
+    margin-top: 20px;
+  }
+
+  .projects-left p {
+    margin-bottom: 20px;
+  }
+
+  .friends a,
+  .friend-celvet,
+  .rovier-brother img {
+    width: 120px;
+  }
+
+  .social-media {
+    margin: 20px 20px;
+  }
+
+  footer .copyright,
+  footer .copyright a {
+    color: white;
+  }
+
+  .go-back {
+    margin-bottom: 20px;
+  }
+
+  .background-image {
+    background-image: url(../assets/img/background_image/background-mobile.jpg);
   }
 
   .guide-menu {
@@ -415,5 +500,11 @@ h1 {
 
   .pfp {
     margin: 20% 0 0 0;
+  }
+  footer {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 100%;
   }
 }

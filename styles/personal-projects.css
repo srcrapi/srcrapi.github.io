@@ -24,76 +24,100 @@ h3 {
   border-radius: 155px;
 }
 
-.project-nijika .nijika-wallpaper,
-.project-nijika .nijika-example {
+.personal-projects .wallpaper,
+.personal-projects .examples {
   padding: 3em;
   width: 60vw;
   border-radius: 65px;
 }
 
-.project-nijika .nijika-example {
+.personal-projects .examples {
   padding: 1.5em;
   border-radius: 30px;
 }
 
-.project-nijika .information {
-  color: var(--cinza);
+.personal-projects .information {
+  color: rgb(79, 79, 79);
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border-left: 6px solid rgba(79, 79, 79, 0.332);
+  border-radius: 5px;
 }
 
-.project-nijika .left {
+.personal-projects .left {
   padding: 3px 0 15px 0;
   width: 57%;
 }
 
-.project-nijika ul {
+.personal-projects ul {
   list-style-type: none;
   width: 47%;
 }
 
-.project-nijika {
+.personal-projects .issues-pull {
+  list-style-type: disc;
+}
+
+.issues-pull li {
+  color: white;
+}
+
+.issues-pull a {
+  color: var(--ryo_color);
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.issues-pull a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.personal-projects {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.nijika-wallpaper,
-.nijika-anjo,
+.wallpaper,
+.app-logo,
 .github-logo-link {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.project-nijika .nijika-anjo {
+.personal-projects .app-logo {
   width: 30vw;
   border-radius: 20px;
 }
 
-.project-nijika h2 {
+.personal-projects h2 {
   color: white;
   padding: 2em 0 2em 0;
   margin-top: 45px;
 }
 
-.project-nijika p {
+.personal-projects p {
   color: white;
   width: 57%;
   text-align: justify;
   padding: 1em;
 }
 
-.project-nijika code {
+.personal-projects code {
   text-align: justify;
   width: 50%;
 }
 
-.project-nijika code {
+.personal-projects code {
   background-color: var(--cinza-code);
   border-radius: 8px;
 }
 
-.project-nijika code p {
+.personal-projects code p {
   color: var(--ryo-color-light);
   font-size: 1.2em;
   width: 100%;
