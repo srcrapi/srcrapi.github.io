@@ -1,24 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
-
 @font-face {
   font-family: "ThunderInferno";
   src: url(/fonts/ThunderInferno.otf) format("opentype");
 }
-
-:root {
-  --ryo_color: rgb(145, 152, 255);
-  --cinza: rgb(75, 74, 74);
-  --dark-cinza: rgb(55, 54, 54);
-  --cinza-code: rgb(43, 44, 49);
-  --secondary-color: #fff;
-  --primary-color: #000;
-  --ryo-color-light: rgb(202, 205, 255);
-  --ryo-color-dark: #05060e;
-  --button-color: #2d2b2b;
-  --button-color-hover: #4c4949;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +12,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: var(--ryo-color-dark);
+  background-color: #05060e;
 }
 
 .background-image {
@@ -38,23 +23,17 @@ body {
   background-size: cover;
 }
 
-/* .background-image-projects {
-  min-height: 100svh;
-  background-image: url(/assets/img/background_image/background-mobile.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
 video {
-  width: 700px;
+  width: 70%;
+  aspect-ratio: 16/9;
+  border-radius: 7px;
 }
 
 header {
-  --dark-cinza: rgba(47, 47, 47, 0);
   padding: 15px;
   border-radius: 7px;
   margin: 15px 15px 0 15px;
-  background-color: var(--dark-cinza);
+  background-color: rgba(47, 47, 47, 0);
 }
 
 main {
@@ -67,6 +46,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 }
 
 .navbar ul {
@@ -74,92 +54,85 @@ main {
   margin: 0;
   padding: 0;
 }
-
-.navbar ul li a {
-  margin: 8px 16px;
-}
-
 .navbar a {
   font-weight: 700;
   text-decoration: none;
   line-height: 15px;
-  color: var(--secondary-color);
+  color: #fff;
   position: relative;
   transition: color 0.3s ease;
 }
+.navbar a:hover {
+  opacity: 0.7;
+}
 
-.navbar ul li a::after {
+.navbar__link {
+  margin: 8px 16px;
+}
+.navbar__link::after {
   content: "";
   display: block;
   width: 0;
   height: 1.5px;
-  background-color: var(--secondary-color);
+  background-color: #fff;
   position: absolute;
   bottom: 0;
   left: 0;
   transition: width 0.3s ease;
 }
-
-.navbar a:hover {
-  opacity: 0.7;
-}
-
-.navbar a:hover::after {
+.navbar__link:hover::after {
   width: 100%;
 }
 
 .container {
-  --cinza: rgba(29, 28, 28, 0.9);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   margin: 2% 32% 6% 32%;
   padding: 2em 0;
-  background-color: var(--cinza);
+  background-color: rgba(29, 28, 28, 0.9);
   border-radius: 15px;
 }
 
 #title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   font-weight: 700;
   color: white;
-  font-size: 3em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 3rem;
 }
 
 /* Index */
-
 .pfp {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
   margin: 6% 0 0 0;
 }
-
 .pfp img {
   width: 180px;
   border: 7px solid rgba(36, 35, 35, 0.482);
   border-radius: 155px;
   transition: transform 1s ease;
 }
-
 .pfp img:hover {
   transform: rotate(360deg);
 }
 
 .guide-menu {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   margin: 2% 38% 2% 38%;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   opacity: 1;
 }
-
 .guide-menu h1 {
   text-align: center;
   font-size: 2em;
@@ -169,18 +142,16 @@ main {
   color: white;
   opacity: 1;
 }
-
 .guide-menu p {
   text-align: center;
   font-size: 1.1em;
   font-weight: 100;
   margin-bottom: 1.4em;
-  color: var(--secondary-color);
+  color: #fff;
   opacity: 1;
 }
 
 /* About */
-
 .pages-container {
   margin: 5%;
   margin-top: 55px;
@@ -190,52 +161,45 @@ main {
   color: white;
   padding: 2em;
 }
-
 .biography .author-color {
-  color: var(--ryo_color);
+  color: rgb(145, 152, 255);
 }
 
 .interests {
   margin-left: 30px;
 }
-
 .interests h2 {
   margin: 8px 0 8px 0;
-  color: white;
+  color: #fff;
   font-weight: 700;
   font-size: 1.5em;
 }
-
 .interests ul {
-  --ryo_color: rgb(184, 189, 255);
   margin-left: 15px;
-  color: var(--ryo_color);
+  color: rgb(184, 189, 255);
 }
 
 .interest-title {
   padding-top: 17px;
   margin-left: 5px;
-  color: white;
+  color: #fff;
 }
 
 .about-friends h2 {
   padding: 1.5em 0 0.7em 0;
   font-size: 2em;
-  color: white;
+  color: #fff;
 }
-
 .about-friends ul {
   list-style-type: none;
 }
-
 .about-friends .friends-link {
   font-size: 1.3em;
   font-weight: 400;
   padding: 7px;
   text-decoration: none;
-  color: var(--ryo_color);
+  color: rgb(145, 152, 255);
 }
-
 .about-friends .friends-link:hover {
   color: #a19c9c;
   text-decoration: underline;
@@ -243,16 +207,14 @@ main {
 
 .projects-section {
   text-align: center;
-  color: white;
+  color: #fff;
   padding: 3em;
 }
-
 .projects-section img {
   margin-top: 25px;
   width: 100px;
   transition: all 0.3s ease;
 }
-
 .projects-section img:hover {
   transform: translateY(-3px);
 }
@@ -260,21 +222,18 @@ main {
 .favorite-anime,
 .favorite-game {
   padding: 2em;
-  color: white;
+  color: #fff;
 }
-
 .favorite-anime p,
 .favorite-game p {
   margin-top: 20px;
 }
-
 .favorite-anime a,
 .favorite-game a {
-  color: var(--ryo_color);
+  color: rgb(145, 152, 255);
   font-weight: 700;
   text-decoration: none;
 }
-
 .favorite-anime a:hover,
 .favorite-game a:hover {
   color: #a19c9c;
@@ -283,48 +242,39 @@ main {
 }
 
 /* Links */
-
 .friends #title {
-  font-family: "ThunderInferno", serif;
+  font-family: "ThunderInferno", sans-serif;
   text-decoration: underline;
 }
-
 .friends .wallpaper {
   padding: 3rem;
   width: 60vw;
   border-radius: 65px;
 }
-
 .friends h1 {
   margin-bottom: 20px;
+  color: #fff;
 }
-
 .friends h2 {
   margin-top: 20px;
+  color: #fff;
 }
-
-.friends h2,
-h1 {
-  color: white;
-}
-
 .friends p {
-  color: var(--dark-cinza);
+  color: rgb(55, 54, 54);
 }
 
 .friends a,
 .friend-celvet,
 .rovier-brother img {
   display: flex;
-  align-items: center;
   justify-content: center;
-
+  align-items: center;
+  flex-direction: row;
   width: 150px;
   border-radius: 50%;
   margin: auto;
   margin-top: 15px;
   margin-bottom: 20px;
-
   transition: transform 0.3s ease;
 }
 
@@ -334,16 +284,15 @@ h1 {
 }
 
 /* Projects */
-
 .container-projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   --_trasition-container-project-duration: var(
-    --transition-container-project-duration,
+    --trasition-container-project-duration,
     0.7s
   );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   padding: 1rem;
   margin: auto;
   max-width: 800px;
@@ -352,27 +301,26 @@ h1 {
   background-color: #222222;
   border-radius: 15px;
   opacity: 0.97;
-
   transition: all var(--_trasition-container-project-duration) ease;
 }
-
 .container-projects:hover {
   transform: scale(1.04);
-  --transition-container-project-duration: 1s;
+  --trasition-container-project-duration: 1s;
 }
 
 .projects-left a {
   text-decoration: none;
 }
-
 .projects-left p {
-  color: white;
+  color: #fff;
   padding-top: 2rem;
   padding-right: 1rem;
 }
-
+.projects-left h1 {
+  color: #fff;
+}
 .projects-left h1:hover {
-  color: var(--ryo_color);
+  color: rgb(145, 152, 255);
 }
 
 .projects-right img {
@@ -385,46 +333,39 @@ footer {
   width: 100%;
   margin-bottom: 20px;
 }
-
 footer .copyright {
   text-align: center;
-  color: white;
+  color: #fff;
 }
-
 footer .copyright a {
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
-
-footer .copyright a:hover {
-  color: var(--ryo_color);
+footer .copyright a {
+  color: rgb(145, 152, 255);
 }
 
 /* Social Medias */
-
 .social-media ul {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
   margin-top: 40px;
   margin-bottom: 50px;
   list-style-type: none;
 }
-
 .social-media li {
   margin-left: 20px;
   margin-right: 10px;
   transition: all 0.3s ease-in-out;
 }
-
 .social-media li:hover {
   transform: translateY(-4px);
 }
-
 .social-media li a i::before {
-  --primary-color: rgba(0, 0, 0, 0.5);
   color: rgb(191, 191, 191);
-  background-color: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   padding: 7px;
 }
@@ -433,78 +374,72 @@ footer .copyright a:hover {
   padding: 0.7em;
   text-decoration: none;
   font-weight: 700;
-  color: var(--ryo-color-light);
+  color: rgb(202, 205, 255);
   border-radius: 10px;
   margin-bottom: 25px;
-  background-color: var(--button-color);
-
+  background-color: #2d2b2b;
   transition: all 0.2s ease;
 }
-
 .go-back:hover {
-  background-color: var(--button-color-hover);
+  background-color: #4c4949;
 }
 
 @media (width <= 1000px) {
   .background-image {
     background-image: url(../assets/img/background_image/background-tablet-large.jpg);
   }
-
   .guide-menu {
     margin: 5% 32% 3% 32%;
   }
 }
-
 @media (width <= 750px) {
   .background-image {
     background-image: url(../assets/img/background_image/background-tablet.jpg);
   }
-
   footer .copyright,
   footer .copyright a {
     color: #474a58;
   }
-
   .guide-menu {
     margin: 5% 25% 3% 25%;
   }
+  video {
+    width: 470px;
+  }
 }
-
-@media (width <= 500px) {
+@media (width <= 505px) {
   .container-projects {
     flex-direction: column;
     max-width: 300px;
     margin-top: 20px;
   }
-
   .projects-left p {
     margin-bottom: 20px;
   }
-
   .friends a,
   .friend-celvet,
   .rovier-brother img {
     width: 120px;
   }
-
-  footer .copyright,
-  footer .copyright a {
-    color: white;
+  footer .copyright, footer .copyright a {
+    color: #fff;
   }
-
   .background-image {
     background-image: url(../assets/img/background_image/background-mobile.jpg);
   }
-
   .background-image--mobile {
     overflow: visible;
   }
-
   .guide-menu {
     margin: 5% 20% 3% 20%;
   }
-
   .pfp {
     margin: 20% 0 0 0;
   }
-}
+  #title {
+    font-size: 2rem;
+  }
+  video {
+    width: 370px;
+  }
+}/*# sourceMappingURL=style.css.map */

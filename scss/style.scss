@@ -1,0 +1,497 @@
+@use "common/" as *;
+
+// Code
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: $ryo-color-dark;
+}
+
+.background-image {
+  overflow: hidden;
+  min-height: 100svh;
+  background-image: url(/assets/img/background_image/background-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+video {
+  width: 70%;
+  aspect-ratio: 16 / 9;
+  border-radius: 7px;
+}
+
+header {
+  $dark-cinza: rgba(47, 47, 47, 0);
+  padding: 15px;
+  border-radius: 7px;
+  margin: 15px 15px 0 15px;
+  background-color: $dark-cinza;
+}
+
+main {
+  position: relative;
+}
+
+.home,
+.navbar ul,
+.navbar {
+  @include flex(space-between, center);
+}
+
+.navbar {
+  & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  & a {
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 15px;
+    color: $secondary-color;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  & a:hover {
+    opacity: 0.7;
+  }
+}
+
+.navbar__link {
+  margin: 8px 16px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1.5px;
+    background-color: $secondary-color;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.container {
+  @include flex(center, center, column);
+
+  $cinza: rgba(29, 28, 28, 0.9);
+  margin: 2% 32% 6% 32%;
+  padding: 2em 0;
+  background-color: $cinza;
+  border-radius: 15px;
+}
+
+#title {
+  @include flex();
+
+  font-weight: 700;
+  color: white;
+  font-size: 3rem;
+}
+
+/* Index */
+
+.pfp {
+  @include flex();
+  margin: 6% 0 0 0;
+
+  & img {
+    width: 180px;
+    border: 7px solid rgba(36, 35, 35, 0.482);
+    border-radius: 155px;
+    transition: transform 1s ease;
+  }
+
+  & img:hover {
+    transform: rotate(360deg);
+  }
+}
+
+.guide-menu {
+  @include flex(center, center, column);
+
+  margin: 2% 38% 2% 38%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  opacity: 1;
+
+  & h1 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 900;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: white;
+    opacity: 1;
+  }
+
+  & p {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 100;
+    margin-bottom: 1.4em;
+    color: $secondary-color;
+    opacity: 1;
+  }
+}
+
+/* About */
+
+.pages-container {
+  margin: 5%;
+  margin-top: 55px;
+}
+
+.biography {
+  color: white;
+  padding: 2em;
+
+  & .author-color {
+    color: $ryo-color;
+  }
+}
+
+.interests {
+  margin-left: 30px;
+
+  & h2 {
+    margin: 8px 0 8px 0;
+    color: $secondary-color;
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+
+  & ul {
+    $ryo-color: rgb(184, 189, 255);
+    margin-left: 15px;
+    color: $ryo-color;
+  }
+}
+
+.interest-title {
+  padding-top: 17px;
+  margin-left: 5px;
+  color: $secondary-color;
+}
+
+.about-friends {
+  & h2 {
+    padding: 1.5em 0 0.7em 0;
+    font-size: 2em;
+    color: $secondary-color;
+  }
+
+  & ul {
+    list-style-type: none;
+  }
+
+  & .friends-link {
+    font-size: 1.3em;
+    font-weight: 400;
+    padding: 7px;
+    text-decoration: none;
+    color: $ryo-color;
+  }
+
+  & .friends-link:hover {
+    color: #a19c9c;
+    text-decoration: underline;
+  }
+}
+
+.projects-section {
+  text-align: center;
+  color: $secondary-color;
+  padding: 3em;
+
+  & img {
+    margin-top: 25px;
+    width: 100px;
+    transition: all 0.3s ease;
+  }
+
+  & img:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.favorite-anime,
+.favorite-game {
+  padding: 2em;
+  color: $secondary-color;
+
+  & p {
+    margin-top: 20px;
+  }
+
+  & a {
+    color: $ryo-color;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  & a:hover {
+    color: #a19c9c;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+}
+
+/* Links */
+
+.friends {
+  #title {
+    font-family: $ff-thunder;
+    text-decoration: underline;
+  }
+
+  & .wallpaper {
+    padding: 3rem;
+    width: 60vw;
+    border-radius: 65px;
+  }
+
+  & h1 {
+    margin-bottom: 20px;
+    color: $secondary-color;
+  }
+
+  & h2 {
+    margin-top: 20px;
+    color: $secondary-color;
+  }
+
+  & p {
+    color: $dark-cinza;
+  }
+}
+
+.friends a,
+.friend-celvet,
+.rovier-brother img {
+  @include flex();
+
+  width: 150px;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 20px;
+
+  transition: transform 0.3s ease;
+}
+
+.friends a:hover {
+  transform: scale(1.1);
+  border-radius: 50%;
+}
+
+/* Projects */
+
+.container-projects {
+  @include flex();
+
+  --_trasition-container-project-duration: var(
+    --trasition-container-project-duration,
+    0.7s
+  );
+
+  padding: 1rem;
+  margin: auto;
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-color: #222222;
+  border-radius: 15px;
+  opacity: 0.97;
+
+  transition: all var(--_trasition-container-project-duration) ease;
+
+  &:hover {
+    transform: scale(1.04);
+    --trasition-container-project-duration: 1s;
+  }
+}
+
+.projects-left {
+  & a {
+    text-decoration: none;
+  }
+
+  & p {
+    color: $secondary-color;
+    padding-top: 2rem;
+    padding-right: 1rem;
+  }
+
+  h1 {
+    color: $secondary-color;
+  }
+
+  & h1:hover {
+    color: $ryo-color;
+  }
+}
+
+.projects-right img {
+  width: 260px;
+  border-radius: 35px;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 20px;
+
+  & .copyright {
+    text-align: center;
+    color: $secondary-color;
+  }
+
+  & .copyright a {
+    text-decoration: none;
+    color: $secondary-color;
+  }
+
+  & .copyright a {
+    color: $ryo-color;
+  }
+}
+
+/* Social Medias */
+
+.social-media {
+  & ul {
+    @include flex();
+
+    margin-top: 40px;
+    margin-bottom: 50px;
+    list-style-type: none;
+  }
+
+  & li {
+    margin-left: 20px;
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  & li:hover {
+    transform: translateY(-4px);
+  }
+
+  & li a i::before {
+    $primary-color: rgba(0, 0, 0, 0.5);
+    color: rgb(191, 191, 191);
+    background-color: $primary-color;
+    border-radius: 10px;
+    padding: 7px;
+  }
+}
+
+.go-back {
+  padding: 0.7em;
+  text-decoration: none;
+  font-weight: 700;
+  color: $ryo-color-light;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  background-color: $button-color;
+
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $button-color-hover;
+  }
+}
+
+@media (width <= 1000px) {
+  .background-image {
+    background-image: url(../assets/img/background_image/background-tablet-large.jpg);
+  }
+
+  .guide-menu {
+    margin: 5% 32% 3% 32%;
+  }
+}
+
+@media (width <= 750px) {
+  .background-image {
+    background-image: url(../assets/img/background_image/background-tablet.jpg);
+  }
+
+  footer .copyright,
+  footer .copyright a {
+    color: #474a58;
+  }
+
+  .guide-menu {
+    margin: 5% 25% 3% 25%;
+  }
+
+  video {
+    width: 470px;
+  }
+}
+
+@media (width <= 505px) {
+  .container-projects {
+    flex-direction: column;
+    max-width: 300px;
+    margin-top: 20px;
+  }
+
+  .projects-left p {
+    margin-bottom: 20px;
+  }
+
+  .friends a,
+  .friend-celvet,
+  .rovier-brother img {
+    width: 120px;
+  }
+
+  footer {
+    & .copyright,
+    & .copyright a {
+      color: $secondary-color;
+    }
+  }
+
+  .background-image {
+    background-image: url(../assets/img/background_image/background-mobile.jpg);
+  }
+
+  .background-image--mobile {
+    overflow: visible;
+  }
+
+  .guide-menu {
+    margin: 5% 20% 3% 20%;
+  }
+
+  .pfp {
+    margin: 20% 0 0 0;
+  }
+
+  #title {
+    font-size: 2rem;
+  }
+
+  video {
+    width: 370px;
+  }
+}

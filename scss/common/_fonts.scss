@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
+@font-face {
+  font-family: "ThunderInferno";
+  src: url(/fonts/ThunderInferno.otf) format("opentype");
+}
+
+$ff-standard: Arial, Helvetica, sans-serif;
+$ff-thunder: "ThunderInferno", sans-serif;
