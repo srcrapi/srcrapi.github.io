@@ -10,8 +10,12 @@
   border: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   background-color: #05060e;
 }
 
@@ -341,7 +345,7 @@ footer .copyright a {
   text-decoration: none;
   color: #fff;
 }
-footer .copyright a {
+footer .copyright a:hover {
   color: rgb(145, 152, 255);
 }
 

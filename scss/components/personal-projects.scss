@@ -5,6 +5,10 @@ h3 {
   color: $secondary-color;
 }
 
+.padding-contents {
+  padding-left: 2rem;
+}
+
 .author-image {
   display: flex;
   align-items: center;
@@ -40,6 +44,31 @@ h3 {
     border-radius: 65px;
   }
 
+  & .contents {
+    margin-right: 80px;
+
+    & li {
+      list-style-type: disc;
+      line-height: 1.5rem;
+      color: $secondary-color;
+    }
+
+    & li a {
+      font-weight: 700;
+      text-decoration: none;
+      color: $ryo-color;
+    }
+
+    & li a:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+
+    & li ul .list-type__circle {
+      list-style-type: circle;
+    }
+  }
+
   & .examples {
     padding: 1.5em;
     width: 70%;
@@ -48,7 +77,7 @@ h3 {
 
   & .information {
     color: rgb(79, 79, 79);
-    margin-bottom: 10px;
+    margin: 0 0 10px 70px;
     border-left: 6px solid rgba(79, 79, 79, 0.332);
   }
 
@@ -69,6 +98,7 @@ h3 {
   & .app-logo {
     width: 30svw;
     border-radius: 20px;
+    margin-top: 40px;
   }
 
   & h2 {
@@ -88,13 +118,13 @@ h3 {
     background-color: $cinza-code;
     border-radius: 8px;
     width: 55%;
-  }
 
-  & code p {
-    color: $ryo-color-light;
-    text-align: justify;
-    font-size: 0.9rem;
-    width: 100%;
+    & p {
+      color: $ryo-color-light;
+      text-align: justify;
+      font-size: 0.9rem;
+      width: 100%;
+    }
   }
 }
 

@@ -9,6 +9,10 @@ h3 {
   color: #fff;
 }
 
+.padding-contents {
+  padding-left: 2rem;
+}
+
 .author-image {
   display: flex;
   align-items: center;
@@ -40,6 +44,26 @@ h3 {
   width: 70%;
   border-radius: 65px;
 }
+.personal-projects .contents {
+  margin-right: 80px;
+}
+.personal-projects .contents li {
+  list-style-type: disc;
+  line-height: 1.5rem;
+  color: #fff;
+}
+.personal-projects .contents li a {
+  font-weight: 700;
+  text-decoration: none;
+  color: rgb(145, 152, 255);
+}
+.personal-projects .contents li a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+.personal-projects .contents li ul .list-type__circle {
+  list-style-type: circle;
+}
 .personal-projects .examples {
   padding: 1.5em;
   width: 70%;
@@ -47,7 +71,7 @@ h3 {
 }
 .personal-projects .information {
   color: rgb(79, 79, 79);
-  margin-bottom: 10px;
+  margin: 0 0 10px 70px;
   border-left: 6px solid rgba(79, 79, 79, 0.332);
 }
 .personal-projects .left {
@@ -64,6 +88,7 @@ h3 {
 .personal-projects .app-logo {
   width: 30svw;
   border-radius: 20px;
+  margin-top: 40px;
 }
 .personal-projects h2 {
   color: #fff;

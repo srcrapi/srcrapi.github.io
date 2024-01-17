@@ -8,8 +8,12 @@
   border: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: $ff-standard;
   background-color: $ryo-color-dark;
 }
 
@@ -367,7 +371,7 @@ footer {
     color: $secondary-color;
   }
 
-  & .copyright a {
+  & .copyright a:hover {
     color: $ryo-color;
   }
 }
