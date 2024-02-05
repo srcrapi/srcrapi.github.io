@@ -1,19 +1,11 @@
 @use "../common/" as *;
 
-h3 {
-  margin-top: 30px;
-  color: $secondary-color;
-}
-
 .padding-contents {
   padding-left: 2rem;
 }
 
 .author-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  @include flex(center, center, column);
 
   & span {
     font-size: 1.3em;
@@ -54,9 +46,18 @@ h3 {
     }
 
     & li a {
+      --_link-color: var(--link-color, #faff93);
       font-weight: 700;
       text-decoration: none;
-      color: $ryo-color;
+      color: var(--_link-color);
+    }
+
+    .ryo__color {
+      --link-color: rgb(145, 152, 255);
+    }
+  
+    .kita__color {
+      --link-color: #ff8787;
     }
 
     & li a:hover {
@@ -75,7 +76,7 @@ h3 {
     border-radius: 30px;
   }
 
-  & .information {
+  .information {
     color: rgb(79, 79, 79);
     margin: 0 0 10px 70px;
     border-left: 6px solid rgba(79, 79, 79, 0.332);
@@ -93,6 +94,32 @@ h3 {
 
   & .issues-pull {
     list-style-type: disc;
+
+    li {
+      color: $secondary-color;
+    }
+
+    a {
+      --_link-color: var(--link-color, #faff93);
+
+      color: var(--_link-color);
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+
+    .ryo__color {
+      --link-color: rgb(145, 152, 255);
+    }
+
+    .kita__color {
+      --link-color: #ff8787;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
   }
 
   & .app-logo {
@@ -101,12 +128,12 @@ h3 {
     margin-top: 40px;
   }
 
-  & h2 {
+  h2, h3 {
     color: $secondary-color;
     padding: 2rem 0 2rem 0;
     margin-top: 45px;
   }
-
+  
   & p {
     color: $secondary-color;
     width: 65%;
@@ -125,24 +152,6 @@ h3 {
       font-size: 0.9rem;
       width: 100%;
     }
-  }
-}
-
-.issues-pull {
-  & li {
-    color: $secondary-color;
-  }
-
-  & a {
-    color: $ryo-color;
-    font-weight: 600;
-    margin-bottom: 10px;
-    text-decoration: none;
-  }
-
-  & a:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
   }
 }
 

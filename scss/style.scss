@@ -1,7 +1,10 @@
+// Commons
 @use "common/" as *;
 
-// Code
+// Components
+@use "components/" as *;
 
+// Code
 * {
   margin: 0;
   padding: 0;
@@ -53,7 +56,7 @@ main {
   & ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 1;
   }
 
   & a {
@@ -104,7 +107,7 @@ main {
   @include flex();
 
   font-weight: 700;
-  color: white;
+  color: $secondary-color;
   font-size: 3rem;
 }
 
@@ -347,7 +350,17 @@ main {
   }
 
   & h1:hover {
-    color: $ryo-color;
+    --_link-color: var(--link-color, #faff93);
+
+    color: var(--_link-color);
+  }
+
+  .ryo__color {
+    --link-color: rgb(145, 152, 255);
+  }
+
+  .kita__color {
+    --link-color: #ff8787;
   }
 }
 
@@ -364,6 +377,7 @@ footer {
   & .copyright {
     text-align: center;
     color: $secondary-color;
+    width: auto;
   }
 
   & .copyright a {
@@ -379,7 +393,7 @@ footer {
 /* Social Medias */
 
 .social-media {
-  & ul {
+   ul {
     @include flex();
 
     margin-top: 40px;
@@ -387,19 +401,19 @@ footer {
     list-style-type: none;
   }
 
-  & li {
+  li {
     margin-left: 20px;
     margin-right: 10px;
     transition: all 0.3s ease-in-out;
   }
 
-  & li:hover {
+  li:hover {
     transform: translateY(-4px);
   }
 
-  & li a i::before {
+  li a i::before {
     $primary-color: rgba(0, 0, 0, 0.5);
-    color: rgb(191, 191, 191);
+    color: $secondary-color;
     background-color: $primary-color;
     border-radius: 10px;
     padding: 7px;
@@ -420,6 +434,10 @@ footer {
   &:hover {
     background-color: $button-color-hover;
   }
+}
+
+.background-image__visible {
+  overflow: visible;
 }
 
 @media (width <= 1000px) {
@@ -451,7 +469,7 @@ footer {
   }
 }
 
-@media (width <= 505px) {
+@media (width <= 515px) {
   .container-projects {
     flex-direction: column;
     max-width: 300px;
@@ -477,10 +495,6 @@ footer {
 
   .background-image {
     background-image: url(../assets/img/background_image/background-mobile.jpg);
-  }
-
-  .background-image--mobile {
-    overflow: visible;
   }
 
   .guide-menu {
