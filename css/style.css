@@ -29,8 +29,8 @@
 
 .personal-projects {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   text-align: justify;
 }
@@ -112,7 +112,8 @@
   border-radius: 20px;
   margin-top: 40px;
 }
-.personal-projects h2, .personal-projects h3 {
+.personal-projects h2,
+.personal-projects h3 {
   color: #fff;
   padding: 2rem 0 2rem 0;
   margin-top: 45px;
@@ -134,6 +135,10 @@
   font-size: 0.9rem;
   width: 100%;
 }
+.personal-projects video {
+  width: 92%;
+  border-radius: 10px;
+}
 
 .github-logo-img {
   width: 60px;
@@ -143,16 +148,25 @@
   margin-top: 60px;
 }
 
+@media screen and (width >= 1000px) {
+  p {
+    font-size: 1.2rem;
+  }
+  video {
+    max-width: 70%;
+  }
+}
 @media screen and (width <= 1000px) {
   .personal-projects code {
-    width: 400px;
+    width: 470px;
   }
 }
 @media screen and (width <= 505px) {
   .personal-projects code {
-    width: 300px;
+    width: 93%;
   }
   .personal-projects code p {
+    padding-left: 6px;
     font-size: 0.7rem;
   }
 }
@@ -177,12 +191,6 @@ body {
   background-image: url(/assets/img/background_image/background-desktop.png);
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-video {
-  width: 70%;
-  aspect-ratio: 16/9;
-  border-radius: 7px;
 }
 
 header {
@@ -383,6 +391,7 @@ main {
 .favorite-anime p,
 .favorite-game p {
   margin-top: 20px;
+  text-align: justify;
 }
 .favorite-anime a,
 .favorite-game a {
@@ -607,6 +616,4 @@ footer .copyright a:hover {
   video {
     width: 370px;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

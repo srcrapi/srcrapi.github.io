@@ -23,11 +23,7 @@
 }
 
 .personal-projects {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
+  @include flex(center, center, column);
   text-align: justify;
 
   & .wallpaper {
@@ -55,7 +51,7 @@
     .ryo__color {
       --link-color: rgb(145, 152, 255);
     }
-  
+
     .kita__color {
       --link-color: #ff8787;
     }
@@ -128,12 +124,13 @@
     margin-top: 40px;
   }
 
-  h2, h3 {
+  h2,
+  h3 {
     color: $secondary-color;
     padding: 2rem 0 2rem 0;
     margin-top: 45px;
   }
-  
+
   & p {
     color: $secondary-color;
     width: 65%;
@@ -153,6 +150,11 @@
       width: 100%;
     }
   }
+
+  video {
+    width: 92%;
+    border-radius: 10px;
+  }
 }
 
 .github-logo-img {
@@ -163,10 +165,20 @@
   margin-top: 60px;
 }
 
+@media screen and (width >= 1000px) {
+  p {
+    font-size: 1.2rem;
+  }
+
+  video {
+    max-width: 70%;
+  }
+}
+
 @media screen and (width <= 1000px) {
   .personal-projects {
     & code {
-      width: 400px;
+      width: 470px;
     }
   }
 }
@@ -174,10 +186,11 @@
 @media screen and (width <= 505px) {
   .personal-projects {
     & code {
-      width: 300px;
+      width: 93%;
     }
 
     & code p {
+      padding-left: 6px;
       font-size: 0.7rem;
     }
   }
