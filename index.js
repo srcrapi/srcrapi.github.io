@@ -12,9 +12,12 @@ function toggleMenu() {
 }
 
 function showMenu(element) {
-  element.classList.add("mobile-menu__visible");
+  element.style.display = "flex";
+  element.style.alignItems = "center";
+  element.style.justifyContent = "center";
+  element.style.flexDirection = "column";
 }
 
 function hideMenu(element) {
-  element.classList.remove("mobile-menu__visible");
+  element.style.display = "none";
 }
