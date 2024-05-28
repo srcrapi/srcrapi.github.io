@@ -229,11 +229,10 @@ main {
 .navbar a:hover {
   opacity: 0.7;
 }
-
-.navbar__link {
+.navbar .navbar__link {
   margin: 8px 16px;
 }
-.navbar__link::after {
+.navbar .navbar__link::after {
   content: "";
   display: block;
   width: 0;
@@ -244,8 +243,37 @@ main {
   left: 0;
   transition: width 0.3s ease;
 }
-.navbar__link:hover::after {
+.navbar .navbar__link:hover::after {
   width: 100%;
+}
+.navbar .navbar__mobile {
+  display: none;
+  position: relative;
+}
+.navbar .navbar__mobile section:first-of-type button {
+  background-color: rgba(255, 255, 255, 0);
+}
+.navbar .navbar__mobile section:first-of-type i {
+  color: #fff;
+}
+.navbar .navbar__mobile section #mobile-menu {
+  display: none;
+  position: fixed;
+  top: 3%;
+  right: 17%;
+  max-width: 100%;
+  width: 30%;
+  height: 15%;
+  border-radius: 5px;
+  background-color: rgba(26, 27, 56, 0.95);
+  z-index: 1;
+}
+.navbar .navbar__mobile section #mobile-menu p {
+  text-align: center;
+  margin: 5px 5px;
+}
+.navbar .navbar__mobile section #mobile-menu p .navbar__link-mobile {
+  font-size: 0.7rem;
 }
 
 .container {
@@ -585,6 +613,13 @@ footer .copyright a:hover {
   }
 }
 @media (width <= 515px) {
+  .navbar__link,
+  .home {
+    display: none;
+  }
+  .navbar__mobile {
+    display: block !important;
+  }
   .container-projects {
     flex-direction: column;
     max-width: 300px;

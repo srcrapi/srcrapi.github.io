@@ -34,6 +34,25 @@
             <a href="../links/" class="navbar__link">Links</a>
           </li>
         </ul>
+
+        <div class="navbar__mobile">
+          <section>
+            <button onclick="toggleMenu()">
+              <i class="fa-solid fa-bars fa-2xl"></i>
+            </button>
+          </section>
+
+          <section>
+            <article id="mobile-menu">
+              <p><a href="/" class="navbar__link-mobile">$ cd /home/</a></p>
+              <p><a href="." class="navbar__link-mobile">About</a></p>
+              <p>
+                <a href="../projects/" class="navbar__link-mobile">Projects</a>
+              </p>
+              <p><a href="../links/" class="navbar__link-mobile">Links</a></p>
+            </article>
+          </section>
+        </div>
       </nav>
     </header>
 
@@ -178,5 +197,7 @@
         </p>
       </footer>
     </main>
+
+    <script src="../index.js"></script>
   </body>
 </html>
