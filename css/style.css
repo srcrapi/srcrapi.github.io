@@ -491,10 +491,10 @@ main {
   opacity: 0.97;
 }
 .container-projects:nth-child(odd) {
-  animation: slideIn 0.5s cubic-bezier(0.11, 0.94, 0.65, 0.46) forwards;
+  animation: slideIn 0.5s cubic-bezier(0.11, 0.94, 0.65, 0.46);
 }
 .container-projects:nth-child(even) {
-  animation: slideInEven 0.5s cubic-bezier(0.11, 0.94, 0.65, 0.46) forwards;
+  animation: slideInEven 0.5s cubic-bezier(0.11, 0.94, 0.65, 0.46);
 }
 
 @keyframes slideIn {
