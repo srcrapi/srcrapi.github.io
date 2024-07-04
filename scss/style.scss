@@ -32,7 +32,6 @@ header {
   $dark-cinza: rgba(47, 47, 47, 0);
   padding: 15px;
   border-radius: 7px;
-  margin: 15px 15px 0 15px;
   background-color: $dark-cinza;
 }
 
@@ -346,7 +345,9 @@ main {
 /* Projects */
 
 .container-projects {
-  @include flex();
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 
   --_trasition-container-project-duration: var(
     --trasition-container-project-duration,
@@ -363,6 +364,11 @@ main {
   opacity: 0.97;
 
   transition: all var(--_trasition-container-project-duration) ease;
+  animation: slideIn 0.5s cubic-bezier(0.11, 0.94, 0.65, 0.46);
+
+  &:nth-child(even) {
+    animation: slideInEven 0.5s cubic-bezier(0.11, 0.94, 0.65, 0.46);
+  }
 
   &:hover {
     transform: scale(1.04);
@@ -370,7 +376,31 @@ main {
   }
 }
 
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInEven {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .projects-left {
+  overflow: hidden;
+
   & a {
     text-decoration: none;
   }
@@ -400,9 +430,14 @@ main {
   }
 }
 
-.projects-right img {
-  width: 260px;
-  border-radius: 35px;
+.projects-right {
+  @include flex();
+
+  img {
+    max-width: 85%;
+    height: auto;
+    border-radius: 35px;
+  }
 }
 
 footer {
@@ -516,7 +551,9 @@ footer {
   }
 
   .container-projects {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+
     max-width: 300px;
     margin-top: 20px;
   }
