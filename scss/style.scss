@@ -363,19 +363,12 @@ main {
   border-radius: 15px;
   opacity: 0.97;
 
-  transition: all var(--_trasition-container-project-duration) ease;
-
   &:nth-child(odd) {
     animation: slideIn 0.5s cubic-bezier(0.11, 0.94, 0.65, 0.46) forwards;
   }
 
   &:nth-child(even) {
     animation: slideInEven 0.5s cubic-bezier(0.11, 0.94, 0.65, 0.46) forwards;
-  }
-
-  &:hover {
-    transform: scale(1.04);
-    --trasition-container-project-duration: 1s;
   }
 }
 
