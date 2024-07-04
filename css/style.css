@@ -36,7 +36,7 @@
 }
 .personal-projects .wallpaper {
   padding: 3em;
-  width: 70%;
+  width: 60%;
   border-radius: 65px;
 }
 .personal-projects .contents {
@@ -67,8 +67,8 @@
   list-style-type: circle;
 }
 .personal-projects .examples {
+  width: 60%;
   padding: 1.5em;
-  width: 70%;
   border-radius: 30px;
 }
 .personal-projects .information {
@@ -108,7 +108,7 @@
   text-decoration-thickness: 2px;
 }
 .personal-projects .app-logo {
-  width: 30svw;
+  width: 20%;
   border-radius: 20px;
   margin-top: 40px;
 }
@@ -120,23 +120,23 @@
 }
 .personal-projects p {
   color: #fff;
+  font-size: 16px;
   width: 65%;
   text-align: justify;
   padding: 1rem;
 }
-.personal-projects code {
+.personal-projects pre {
   background-color: rgb(43, 44, 49);
   border-radius: 8px;
   width: 55%;
-}
-.personal-projects code p {
+  white-space: pre-wrap;
+  overflow: auto;
   color: rgb(202, 205, 255);
   text-align: justify;
   font-size: 0.9rem;
-  width: 100%;
 }
 .personal-projects video {
-  width: 92%;
+  width: 60%;
   border-radius: 10px;
 }
 
@@ -157,16 +157,13 @@
   }
 }
 @media screen and (width <= 1000px) {
-  .personal-projects code {
+  .personal-projects pre {
     width: 470px;
   }
 }
 @media screen and (width <= 505px) {
-  .personal-projects code {
+  .personal-projects pre {
     width: 93%;
-  }
-  .personal-projects code p {
-    padding-left: 6px;
     font-size: 0.7rem;
   }
 }
@@ -294,7 +291,7 @@ main {
   flex-direction: row;
   font-weight: 700;
   color: #fff;
-  font-size: 3rem;
+  font-size: 2.7rem;
 }
 
 /* Index */
