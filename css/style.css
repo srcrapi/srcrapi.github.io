@@ -474,29 +474,40 @@ main {
 
 /* Projects */
 .container-projects {
+  margin-bottom: 15px;
+}
+.container-projects:first-of-type {
+  margin-top: 45px;
+}
+.container-projects a {
+  text-decoration: none;
+}
+.container-projects:nth-child(odd) {
+  animation: slideIn 0.6s cubic-bezier(0.11, 0.94, 0.65, 0.46) both;
+}
+.container-projects:nth-child(even) {
+  animation: slideInEven 0.6s cubic-bezier(0.11, 0.94, 0.65, 0.46) both;
+}
+
+.projects-card {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  height: 170px;
   --_trasition-container-project-duration: var(
     --trasition-container-project-duration,
     0.7s
   );
-  padding: 1rem;
-  margin: auto;
+  line-height: 1.7rem;
   max-width: 800px;
-  width: 100%;
-  margin-bottom: 25px;
-  background-color: #222222;
+  margin: auto;
+  background-color: rgb(34, 34, 34);
   border-radius: 15px;
   overflow: hidden;
   opacity: 0.97;
+  transition: background-color 0.3s ease-in-out;
 }
-.container-projects:nth-child(odd) {
-  animation: slideIn 0.5s cubic-bezier(0.11, 0.94, 0.65, 0.46);
-}
-.container-projects:nth-child(even) {
-  animation: slideInEven 0.5s cubic-bezier(0.11, 0.94, 0.65, 0.46);
+
+.projects-card:hover {
+  background-color: rgb(46, 46, 46);
 }
 
 @keyframes slideIn {
@@ -519,15 +530,18 @@ main {
     opacity: 1;
   }
 }
-.projects-left a {
-  text-decoration: none;
+.projects-left {
+  padding: 1rem;
+  overflow: hidden;
 }
 .projects-left p {
+  font-size: 1.1rem;
   color: #fff;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-right: 1rem;
 }
 .projects-left h1 {
+  font-size: 1.3rem;
   color: #fff;
 }
 .projects-left h1:hover {
@@ -547,7 +561,8 @@ main {
 .projects-right img {
   width: 320px;
   height: 100%;
-  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 footer {
@@ -642,13 +657,10 @@ footer .copyright a:hover {
   .navbar__mobile {
     display: block !important;
   }
-  .container-projects {
+  .projects-card {
     flex-direction: column;
+    height: auto;
     max-width: 300px;
-    margin-top: 20px;
-  }
-  .projects-left p {
-    margin-bottom: 20px;
   }
   .friends a,
   .friend-celvet,

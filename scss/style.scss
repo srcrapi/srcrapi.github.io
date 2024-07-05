@@ -345,30 +345,47 @@ main {
 /* Projects */
 
 .container-projects {
-  @include flex();
+  margin-bottom: 15px;
+
+  &:first-of-type {
+    margin-top: 45px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &:nth-child(odd) {
+    animation: slideIn 0.6s cubic-bezier(0.11, 0.94, 0.65, 0.46) both;
+  }
+
+  &:nth-child(even) {
+    animation: slideInEven 0.6s cubic-bezier(0.11, 0.94, 0.65, 0.46) both;
+  }
+}
+
+.projects-card {
+  display: flex;
+  height: 170px;
 
   --_trasition-container-project-duration: var(
     --trasition-container-project-duration,
     0.7s
   );
 
-  padding: 1rem;
-  margin: auto;
+  line-height: 1.7rem;
   max-width: 800px;
-  width: 100%;
-  margin-bottom: 25px;
-  background-color: #222222;
+  margin: auto;
+  background-color: rgb(34, 34, 34);
   border-radius: 15px;
   overflow: hidden;
   opacity: 0.97;
 
-  &:nth-child(odd) {
-    animation: slideIn 0.5s cubic-bezier(0.11, 0.94, 0.65, 0.46);
-  }
+  transition: background-color 0.3s ease-in-out;
+}
 
-  &:nth-child(even) {
-    animation: slideInEven 0.5s cubic-bezier(0.11, 0.94, 0.65, 0.46);
-  }
+.projects-card:hover {
+  background-color: rgb(46, 46, 46);
 }
 
 @keyframes slideIn {
@@ -394,17 +411,18 @@ main {
 }
 
 .projects-left {
-  & a {
-    text-decoration: none;
-  }
+  padding: 1rem;
+  overflow: hidden;
 
   & p {
+    font-size: 1.1rem;
     color: $secondary-color;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-right: 1rem;
   }
 
   h1 {
+    font-size: 1.3rem;
     color: $secondary-color;
   }
 
@@ -429,7 +447,7 @@ main {
   img {
     width: 320px;
     height: 100%;
-    border-radius: 15px;
+    object-fit: cover;
   }
 }
 
@@ -543,15 +561,11 @@ footer {
     display: block !important;
   }
 
-  .container-projects {
+  .projects-card {
     flex-direction: column;
 
+    height: auto;
     max-width: 300px;
-    margin-top: 20px;
-  }
-
-  .projects-left p {
-    margin-bottom: 20px;
   }
 
   .friends a,
