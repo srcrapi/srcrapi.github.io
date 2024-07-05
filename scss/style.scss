@@ -345,9 +345,7 @@ main {
 /* Projects */
 
 .container-projects {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  @include flex();
 
   --_trasition-container-project-duration: var(
     --trasition-container-project-duration,
@@ -361,6 +359,7 @@ main {
   margin-bottom: 25px;
   background-color: #222222;
   border-radius: 15px;
+  overflow: hidden;
   opacity: 0.97;
 
   &:nth-child(odd) {
@@ -395,16 +394,14 @@ main {
 }
 
 .projects-left {
-  overflow: hidden;
-
   & a {
     text-decoration: none;
   }
 
   & p {
     color: $secondary-color;
-    padding-top: 2rem;
-    padding-right: 1rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
   }
 
   h1 {
@@ -427,12 +424,12 @@ main {
 }
 
 .projects-right {
-  @include flex();
+  flex: 1;
 
   img {
-    max-width: 85%;
-    height: auto;
-    border-radius: 35px;
+    width: 320px;
+    height: 100%;
+    border-radius: 15px;
   }
 }
 
@@ -547,8 +544,7 @@ footer {
   }
 
   .container-projects {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+    flex-direction: column;
 
     max-width: 300px;
     margin-top: 20px;
