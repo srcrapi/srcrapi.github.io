@@ -1,0 +1,35 @@
+.background-about {
+  background-image: url("/assets/img/About/ryo_machine.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+.main-about {
+  background-color: rgb(80, 80, 248);
+  padding: 30px;
+
+  article {
+    display: flex;
+    margin-top: 15px;
+
+    a {
+      padding: 5px;
+    }
+
+    img {
+      width: 68px;
+      height: 68px;
+      border-radius: 100%;
+      border: 2px solid pink;
+    }
+  }
+}
+
+#title {
+  text-align: center;
+  padding: 80px;
+
+  h1 {
+    font-size: 2rem;
+  }
+}
