@@ -1,15 +1,78 @@
+@use "../common/" as *;
+
+body {
+  background-color: rgb(80, 80, 248);
+}
+
 .background-about {
   background-image: url("/assets/img/About/ryo_machine.jpg");
   background-size: cover;
   background-position: top;
+  background-attachment: fixed;
 }
 
 .main-about {
-  background-color: rgb(80, 80, 248);
   padding: 30px;
 
-  article {
+  #tech {
+    @include flex;
+    flex-wrap: wrap;
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(1000%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    a {
+      background-color: white;
+      color: black;
+      border-bottom: 5px solid orange;
+      border-radius: 7px;
+      margin: 25px 10px;
+      padding: 10px;
+      text-decoration: none;
+      transform: translateY(1000%);
+
+      @include slideInAnimation(1s, 0.2s, 4);
+
+      h3 {
+        text-align: center;
+      }
+
+      img {
+        width: 68px;
+        height: 68px;
+      }
+    }
+  }
+
+  .projects-about {
+    @include flex($flexDirection: column);
+    margin-top: 35px;
+
+    a {
+      text-decoration: none;
+      margin: 20px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: translateY(-4px);
+      }
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  #friends {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 15px;
 
     a {
@@ -21,6 +84,10 @@
       height: 68px;
       border-radius: 100%;
       border: 2px solid pink;
+
+      &:hover {
+        box-shadow: 0 5px 10px grey;
+      }
     }
   }
 }

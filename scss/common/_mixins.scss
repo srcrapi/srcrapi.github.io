@@ -4,3 +4,12 @@
   justify-content: $justifyContent;
   flex-direction: $flexDirection;
 }
+
+@mixin slideInAnimation($duration, $delay, $items) {
+  @for $i from 1 through $items {
+    &:nth-child(#{$i}) {
+      animation: slideIn $duration ease-in-out both;
+      animation-delay: calc($delay * ($i - 1));
+    }
+  }
+}

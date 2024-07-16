@@ -1,29 +1,118 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  background-color: rgb(80, 80, 248);
+}
+
 .background-about {
   background-image: url("/assets/img/About/ryo_machine.jpg");
   background-size: cover;
   background-position: top;
+  background-attachment: fixed;
 }
 
 .main-about {
-  background-color: rgb(80, 80, 248);
   padding: 30px;
 }
 
-.main-about article {
+.main-about #tech {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(1000%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.main-about #tech a {
+  background-color: white;
+  color: black;
+  border-bottom: 5px solid orange;
+  border-radius: 7px;
+  margin: 25px 10px;
+  padding: 10px;
+  text-decoration: none;
+  transform: translateY(1000%);
+}
+
+.main-about #tech a:nth-child(1) {
+  animation: slideIn 1s ease-in-out both;
+  animation-delay: 0s;
+}
+
+.main-about #tech a:nth-child(2) {
+  animation: slideIn 1s ease-in-out both;
+  animation-delay: 0.2s;
+}
+
+.main-about #tech a:nth-child(3) {
+  animation: slideIn 1s ease-in-out both;
+  animation-delay: 0.4s;
+}
+
+.main-about #tech a:nth-child(4) {
+  animation: slideIn 1s ease-in-out both;
+  animation-delay: 0.6s;
+}
+
+.main-about #tech a h3 {
+  text-align: center;
+}
+
+.main-about #tech a img {
+  width: 68px;
+  height: 68px;
+}
+
+.main-about .projects-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 35px;
+}
+
+.main-about .projects-about a {
+  text-decoration: none;
+  margin: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-about .projects-about a:hover {
+  transform: translateY(-4px);
+}
+
+.main-about .projects-about img {
+  width: 100px;
+  height: 100px;
+}
+
+.main-about #friends {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 15px;
 }
 
-.main-about article a {
+.main-about #friends a {
   padding: 5px;
 }
 
-.main-about article img {
+.main-about #friends img {
   width: 68px;
   height: 68px;
   border-radius: 100%;
   border: 2px solid pink;
+}
+
+.main-about #friends img:hover {
+  box-shadow: 0 5px 10px grey;
 }
 
 #title {
@@ -159,8 +248,9 @@ header div img {
   border-radius: 100%;
 }
 .main .pfp-image img {
-  width: 200px;
-  height: auto;
+  display: block;
+  width: 256px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: all 0.5s ease-in-out;
