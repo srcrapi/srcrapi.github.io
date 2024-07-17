@@ -23,6 +23,12 @@ const techStack = [
     src: "/assets/img/tech/python.svg",
     alt: "Python",
   },
+  {
+    name: "Bash",
+    url: "https://www.gnu.org/software/bash",
+    src: "/assets/img/tech/bash.svg",
+    alt: "Bash",
+  },
 ];
 
 const createTechStack = () => {
