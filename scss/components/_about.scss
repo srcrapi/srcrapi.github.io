@@ -1,15 +1,6 @@
 @use "../common/" as *;
 
-.background-about {
-  background-image: url("/assets/img/About/ryo_machine.jpg");
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed;
-  border-bottom-left-radius: 17px;
-  border-bottom-right-radius: 17px;
-}
-
-.main-about {
+.main-components {
   margin: 30px 200px;
 
   h1 {
@@ -126,17 +117,8 @@
   }
 }
 
-#title {
-  text-align: center;
-  padding: 80px;
-
-  h1 {
-    font-size: 2.5rem;
-  }
-}
-
 @media screen and (max-width: 800px) {
-  .main-about {
+  .main-components {
     margin-left: 21px;
     margin-right: 21px;
   }
