@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nijika</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="/assets/img/favicons/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="background-projects-content">
+      <nav>
+        <section>
+          <ul>
+            <li><a href="/">home</a></li>
+            <li><a href="/about">about</a></li>
+            <li><a href="/projects">projects</a></li>
+          </ul>
+          <div>
+            <a href="/">
+              <img src="/assets/img/favicons/favicon.ico" alt="Page image" />
+            </a>
+          </div>
+        </section>
+      </nav>
+      <section id="title">
+        <h1>Nijika</h1>
+      </section>
+    </header>
+    <main class="main-project-content">
+      <section class="content">
+        <h2>NIJIKA. Script escrito em C</h2>
+
+        <div class="app-logo">
+          <img
+            src="/assets/img/Projects/NIJIKA-post/nijika-anjo.jpg"
+            alt="nijika-anjo"
+          />
+        </div>
+
+        <p>
+          O objetivo de NIJIKA é de alterar o wallpaper baseado em um diretório
+          que é indicado pelo utilizador, fazendo uma listagem das imagens
+          dentro dele e dando a opção de escolher uma colocando ela como
+          wallpaper, mesmo se forem colocadas novas imagens ele atualizará os
+          números de escolha em outra sessão.
+        </p>
+
+        <div class="github-logo-link">
+          <a
+            href="https://github.com/srcrapi/NIJIKA"
+            target="_blank"
+            rel="external"
+          >
+            <img src="/assets/img/github-logo-light.png" alt="github-logo" />
+          </a>
+        </div>
+
+        <h2 id="Usage">Usage</h2>
+
+        <p class="information">É recomendado o uso do powershell</p>
+
+        <p>
+          Primeiro clone o repositório do github para uma pasta (Menos
+          diretamente nos Documentos).
+        </p>
+
+        <div class="code-container">
+          <pre><code>$ git clone https://github.com/srcrapi/NIJIKA.git</code></pre>
+        </div>
+
+        <p>
+          Depois de clonar o repositorio terá de entrar na pasta NIJIKA depois
+          na pasta bin
+        </p>
+
+        <div class="code-container">
+          <pre><code>$ cd .\NIJIKA\bin</code></pre>
+        </div>
+
+        <p>Execute o NIJIKA.exe assim que estiver na pasta bin</p>
+
+        <div class="code-container">
+          <pre><code>$ .\NIJIKA.exe</code></pre>
+        </div>
+
+        <p>
+          E deverá ver algum input que pede a localização da pasta dos
+          wallpapers, vai ser preciso inserir a caminho completo da pasta onde
+          contem todas as imagens que deseja como wallpaper.
+        </p>
+
+        <h3>Exemplo de localização:</h3>
+
+        <div class="examples">
+          <img
+            src="/assets/img/Projects/NIJIKA-post/Exemplo-Localizaçao.png"
+            alt="example-location"
+          />
+        </div>
+
+        <h3>Exemplo de caminho:</h3>
+
+        <div class="examples">
+          <img
+            src="/assets/img/Projects/NIJIKA-post/Exemplo-caminho.png"
+            alt="Exemplo Caminho"
+          />
+        </div>
+
+        <p>
+          Troque o "rafa1" pelo seu username e o caminho pelo o seu ficaria
+          assim:
+        </p>
+
+        <p class="information">C:\Users\username\path</p>
+
+        <p>
+          Uma vez que o caminho esteja colocado corretamente deve listar todas
+          as imagens que estão presentes no diretório que foi colocado:
+        </p>
+
+        <div class="examples">
+          <img
+            src="/assets/img/Projects/NIJIKA-post/Exemplo-Lista.png"
+            alt="Exemplo lista"
+          />
+        </div>
+
+        <p>
+          Agora só vai precisar digitar o número do wallpaper que quer e o
+          wallpaper vai se alterar automaticamente.
+        </p>
+
+        <h2 id="Video">Video Exemplo</h2>
+
+        <div class="video-container">
+          <video controls>
+            <source
+              src="/assets/videos/How-Nijika-Works.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+
+        <h2 id="Errors">Erros NIJIKA</h2>
+
+        <p>
+          Os erros que podem acontecer com NIJIKA é quando vamos colocar o
+          caminho do diretório onde estão os wallpapers e nos enganos sem querer
+          ou por colocar o caminho errado como está abaixo.
+        </p>
+
+        <div class="examples">
+          <img
+            src="/assets/img/Projects/NIJIKA-post/Erro-NIJIKA.png"
+            alt="Erro Nijika"
+          />
+        </div>
+
+        <p>
+          O erro acima foi porque não foi colocado o "Users" antes do username
+          que é uma parte essencial.
+        </p>
+
+        <h3 id="How-to-Resolve">Como resolver ?</h3>
+
+        <p>
+          Podemos resolver este problema de uma maneira muito simples, abra o
+          explorer vá na pasta Documentos depois em NIJIKA e apague o arquivo
+          dentro dela ou altere colocando o caminho corretamente
+        </p>
+
+        <div class="examples">
+          <img
+            src="/assets/img/Projects/NIJIKA-post/Arquivo-NIJIKA.png"
+            alt="Arquivo NIJIKA"
+          />
+        </div>
+
+        <h2 id="Issues">Problemas?</h2>
+
+        <p>
+          Se tiveres encontrado algum erro ou desejas fazer uma contribuição
+          para o codigo podes sempre abrir uma issue ou pull request.
+        </p>
+
+        <ul class="issues-pull">
+          <li>
+            <a
+              href="https://github.com/srcrapi/ryo/issues"
+              rel="noreferrer"
+              target="_blank"
+              >issues</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/srcrapi/ryo/pulls"
+              rel="noreferrer"
+              target="_blank"
+              >pull requests</a
+            >
+          </li>
+        </ul>
+
+        <h2 id="Conclusion">Conclusão</h2>
+
+        <p>
+          O programa é focado para o público que gosta de alterar o wallpaper
+          constantemente (ou que têm vários) e querem alterar de uma vez e ver
+          qual eles vão querer usar desta vez sem precisarem clicar sempre com o
+          botão direito na imagem e selecionar como fundo com NIJIKA basta
+          colocar o número corresponde e o wallpaper irá ser alterado.
+        </p>
+
+        <div class="back">
+          <a href="/projects/">Back</a>
+        </div>
+      </section>
+      <section class="contents-table">
+        <h2>Contents</h2>
+        <nav>
+          <ul>
+            <li><a href="#Usage" class="table-hover">Usage</a></li>
+            <li><a href="#Video" class="table-hover">Example video</a></li>
+            <li>
+              <a href="#Errors" class="table-hover">Errors</a>
+              <ul>
+                <li>
+                  <a href="#How-to-Resolve" class="table-hover"
+                    >How to Resolve</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="#Issues" class="table-hover">Issues</a></li>
+            <li><a href="#Conclusion" class="table-hover">Conclusion</a></li>
+          </ul>
+        </nav>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Made by
+        <a
+          href="https://github.com/srcrapi/srcrapi.github.io"
+          rel="external"
+          target="_blank"
+          >rap1</a
+        >
+      </p>
+    </footer>
+    <script src="/scripts/banners.js"></script>
+  </body>
+</html>

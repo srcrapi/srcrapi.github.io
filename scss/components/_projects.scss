@@ -3,6 +3,7 @@
 .main-components {
   .project-cards {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     overflow: hidden;
   }
@@ -14,8 +15,10 @@
     background-image: url("/assets/img/Projects/banners/nijika-wallpaper.jpg");
     background-color: $surface1;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
+    background-position-y: -12px;
     background-blend-mode: overlay;
+    background-repeat: no-repeat;
 
     text-decoration: none;
     border: 2px solid $border;
@@ -52,5 +55,12 @@
       flex-grow: 1;
       margin: 15px;
     }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .main-components {
+    margin-left: 21px;
+    margin-right: 21px;
   }
 }

@@ -154,6 +154,7 @@
 }
 .main-components .project-cards {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   overflow: hidden;
 }
@@ -164,8 +165,10 @@
   background-image: url("/assets/img/Projects/banners/nijika-wallpaper.jpg");
   background-color: #303030;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
+  background-position-y: -12px;
   background-blend-mode: overlay;
+  background-repeat: no-repeat;
   text-decoration: none;
   border: 2px solid rgba(205, 199, 229, 0.5);
   border-radius: 13px;
@@ -202,11 +205,225 @@
   margin: 15px;
 }
 
+@media screen and (max-width: 1250px) {
+  .main-components {
+    margin-left: 21px;
+    margin-right: 21px;
+  }
+}
+.main-project-content {
+  display: flex;
+}
+
+.main-project-content p {
+  margin: 15px 0;
+}
+
+.main-project-content h2 {
+  margin: 10px 0;
+}
+
+.main-project-content .content {
+  flex: 1;
+  padding: 20px 50px;
+}
+
+.main-project-content .content .issues-pull {
+  font-weight: 700;
+  margin: 25px 0;
+  padding-left: 50px;
+}
+
+.main-project-content .content .issues-pull a {
+  color: #3c5ac9;
+  text-decoration-thickness: 2px;
+}
+
+.main-project-content .content .issues-pull a:not(:hover, :focus) {
+  text-decoration: none;
+}
+
+.main-project-content .content .information {
+  border-left: 3px solid grey;
+  color: grey;
+  padding: 5px;
+  padding-left: 10px;
+  margin-left: 20px;
+}
+
+.main-project-content .content .github-logo-link {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.main-project-content .content .github-logo-link a {
+  transition: all 0.3s ease-in-out;
+}
+
+.main-project-content .content .github-logo-link a:hover {
+  transform: translateY(-3px);
+}
+
+.main-project-content .content .github-logo-link img {
+  width: 60px;
+}
+
+.main-project-content .content .code-container {
+  display: flex;
+  margin: 30px 0;
+}
+
+.main-project-content .content .code-container pre {
+  margin: 0;
+  width: 40%;
+  word-wrap: normal;
+  overflow-x: auto;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: rgba(36, 43, 57, 0.75);
+}
+
+.main-project-content .content .code-container code {
+  font-size: 14px;
+}
+
+.main-project-content .content .app-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.main-project-content .content .app-logo img {
+  width: 450px;
+  margin: 20px 0;
+  border-radius: 20px;
+}
+
+.main-project-content .content .examples {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.main-project-content .content .examples img {
+  border-radius: 7px;
+  width: 65%;
+  height: auto;
+}
+
+.main-project-content .content .video-container {
+  display: flex;
+  justify-content: center;
+}
+
+.main-project-content .content .video-container video {
+  margin: 30px 0;
+  width: 65%;
+  height: auto;
+  border-radius: 7px;
+}
+
+.main-project-content .content .back {
+  display: flex;
+  justify-content: center;
+}
+
+.main-project-content .content .back a {
+  background-color: #303030;
+  color: #e8e4f5;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 7px;
+  margin: 25px 0;
+  font-weight: 700;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.main-project-content .content .back a:hover {
+  background-color: rgba(48, 48, 48, 0.6666666667);
+}
+
+.main-project-content .contents-table {
+  position: sticky;
+  top: 2rem;
+  width: 180px;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 30px;
+  padding: 0 20px;
+  border-left: 1px solid rgba(205, 199, 229, 0.5);
+}
+
+.main-project-content .contents-table h2 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.main-project-content .contents-table ul {
+  line-height: 1.75rem;
+  list-style: none;
+  font-size: 16px;
+}
+
+.main-project-content .contents-table ul .table-hover {
+  position: relative;
+  display: inline-block;
+  padding-left: 15px;
+  text-decoration: none;
+  color: #e8e4f5;
+  font-weight: 500;
+  transition: all 0.7s ease-in-out;
+}
+
+.main-project-content .contents-table ul .table-hover::before {
+  content: "#";
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  font-weight: bold;
+  color: rgba(205, 199, 229, 0.5);
+  transition: opacity 0.3s ease;
+}
+
+.main-project-content .contents-table ul .table-hover:hover::before {
+  opacity: 1;
+}
+
+.main-project-content .contents-table ul ul {
+  margin-top: 0;
+  padding-left: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .main-project-content p {
+    font-size: 14px;
+  }
+  .main-project-content .content {
+    padding: 10px 12px;
+  }
+  .main-project-content .content .app-logo img {
+    width: 200px;
+  }
+  .main-project-content .content .examples img {
+    width: 90%;
+  }
+  .main-project-content .content .video-container video {
+    width: 90%;
+  }
+  .main-project-content .contents-table {
+    display: none;
+  }
+}
 * {
   padding: 0;
   margin: 0;
   border: 0;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body,
@@ -241,7 +458,8 @@ body {
 }
 
 .background-projects,
-.background-about {
+.background-about,
+.background-projects-content {
   background-image: url("/assets/img/Projects/hutao_cool.jpg");
   background-size: cover;
   background-position: center center;
@@ -412,4 +630,30 @@ footer p a {
 }
 footer p a:not(:hover, :focus) {
   text-decoration: none;
+}
+
+@media screen and (max-width: 860px) {
+  .main section {
+    flex-direction: column;
+  }
+  .main section .pfp-image {
+    margin-right: 0;
+  }
+  .main section .menu ul {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  .main section {
+    padding: 20px 25px;
+  }
+  .main section .pfp-image img {
+    width: 200px;
+  }
+  .main section .menu h1 {
+    font-size: 28px;
+  }
+  .main section .menu p {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */

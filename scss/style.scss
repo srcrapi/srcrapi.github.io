@@ -10,6 +10,10 @@
   font-family: $ff-standard;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 html {
   height: 100svh;
@@ -43,7 +47,8 @@ body {
 }
 
 .background-projects,
-.background-about {
+.background-about,
+.background-projects-content {
   background-image: url("/assets/img/Projects/hutao_cool.jpg");
   background-size: cover;
   background-position: center center;
@@ -230,6 +235,40 @@ footer {
 
       &:not(:hover, :focus) {
         text-decoration: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .main section {
+    flex-direction: column;
+
+    .pfp-image {
+      margin-right: 0;
+    }
+
+    .menu ul {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .main section {
+    padding: 20px 25px;
+
+    .pfp-image img {
+      width: 200px;
+    }
+
+    .menu {
+      h1 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 14px;
       }
     }
   }
