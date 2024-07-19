@@ -33,6 +33,4 @@ const createFriendList = () => {
   });
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  createFriendList();
-});
+document.addEventListener("DOMContentLoaded", createFriendList);

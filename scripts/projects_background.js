@@ -1,5 +1,5 @@
 // Ordenado na ordem que ta no html
-const backgrounds = ["nijika-wallpaper.jpg", "ryo_image.jpg", "kita_image.jpg"];
+const backgrounds = ["nijika-wallpaper.jpg", "ryo_image.png", "kita_image.jpg"];
 const basePath = "/assets/img/Projects/banners";
 
 const setBackground = () => {
@@ -12,6 +12,4 @@ const setBackground = () => {
   });
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  setBackground();
-});
+document.addEventListener("DOMContentLoaded", setBackground);
