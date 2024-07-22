@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import config from "../components/configs";
+
+import { ICON } from "../scripts/ssr/constants";
+
+const page = config[404];
+---
+
+<Layout title={page.title} description={page.description}>
+    <section
+        class="flex flex-col items-center justify-center h-full mb-10 z-[1]"
+    >
+        <img src={ICON} alt={page.alt} class="w-[200px] mb-5" />
+
+        <h1 class="font-bold text-4xl">{page.title}</h1>
+        <h2>{page.description}</h2>
+    </section>
+</Layout>

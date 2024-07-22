@@ -1,0 +1,22 @@
+---
+import BannerLayout from "../layouts/BannerLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+import configs from "../components/configs";
+
+const page = configs.projects;
+---
+
+<BannerLayout
+  title={page.title}
+  description={page.description}
+  banner={page.banner}
+>
+  <section slot="header" class="text-center p-20">
+    <h1 class="text-[2.5rem] font-bold">{page.title}</h1>
+  </section>
+
+  <section>
+    <ProjectCard url="/projects/nijika" />
+  </section>
+</BannerLayout>

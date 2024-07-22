@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Menu from "../components/Menu.astro";
+
+import configs from "../components/configs";
+
+const page = configs.home;
+---
+
+<Layout title={page.title} description={page.fullDescription}>
+  <main class="h-full flex justify-center items-center grow">
+    <section
+      class="flex justify-between items-center bg-surface2 rounded-3xl py-10 px-20 gap-5 backdrop-blur-lg animate-scaleIn"
+    >
+      <div
+        class="overflow-hidden mr-8 border-4 border-solid border-primary rounded-full"
+      >
+        <img
+          src="/assets/img/pfp/ryo_neutral.jpg"
+          alt={page.altImage}
+          class="block w-64 h-full object-cover transition-all duration-500 ease-in-out hover:scale-110"
+        />
+      </div>
+
+      <Menu />
+    </section>
+  </main>
+</Layout>

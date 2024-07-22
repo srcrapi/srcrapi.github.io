@@ -1,0 +1,47 @@
+---
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+
+import { AUTHOR, ICON } from "../scripts/ssr/constants";
+
+interface Props {
+    title: string;
+    description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth h-svh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <link rel="shortcut icon" href={ICON} type="image/x-icon" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        />
+
+        <meta name="author" content={AUTHOR} />
+        <meta name="description" content={description} />
+
+        <meta name="og:title" content={title} />
+    </head>
+    <body
+        class="flex flex-col justify-start bg-primary text-primary h-svh font-montserrat overflow-auto relative bg-ryoBackground bg-cover bg-center bg-no-repeat before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black-semi-transparent"
+    >
+        <header class="flex justify-center items-center z-[1]">
+            <NavBar />
+        </header>
+
+        <slot />
+
+        <Footer />
+    </body>
+</html>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+</style>

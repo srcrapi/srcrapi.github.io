@@ -1,0 +1,13 @@
+---
+interface Props {
+  interest: string;
+}
+
+const { interest } = Astro.props;
+---
+
+<li
+  class="bg-surface1-semi-transparent border-l-4 border-solid border-accent-color text-primary p-[6px] rounded-lg rounded-tl-none rounded-bl-none"
+>
+  {interest}
+</li>

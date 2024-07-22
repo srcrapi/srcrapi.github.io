@@ -1,0 +1,14 @@
+---
+interface Props {
+    url: string;
+    name: string;
+}
+
+const { url, name } = Astro.props;
+---
+
+<li class="transition-all duration-300 ease-in-out hover:-translate-y-1">
+    <a href={url} rel="external" target="_blank">
+        <i class={`${name} text-primary`}></i>
+    </a>
+</li>

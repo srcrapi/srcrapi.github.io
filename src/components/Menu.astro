@@ -1,0 +1,42 @@
+---
+import SocialIcons from "./SocialIcons.astro";
+
+import configs from "./configs";
+import { AUTHOR } from "../scripts/ssr/constants";
+
+const page = configs.home;
+---
+
+<div class="text-primary">
+    <h1 class="text-4xl font-bold">
+        {page.message}
+        <span class="text-accent-color">{AUTHOR}</span>
+    </h1>
+
+    <p class="leading-6">
+        {
+            page.description.map((message: string, index) => (
+                <>
+                    {message}
+
+                    {index === 0 && <br />}
+                </>
+            ))
+        }
+    </p>
+
+    <ul class="flex list-none mt-6 gap-4">
+        <SocialIcons
+            url="https://github.com/srcrapi"
+            name="fa-brands fa-github fa-2xl"
+        />
+        <SocialIcons
+            url="https://twitter.com/srcrap1"
+            name="fa-brands fa-twitter fa-2xl"
+        />
+        <SocialIcons
+            url="https://youtube.com/@srcrap1"
+            name="fa-brands fa-youtube fa-2xl"
+        />
+    </ul>
+</div>

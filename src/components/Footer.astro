@@ -1,0 +1,18 @@
+---
+import { AUTHOR, AUTHOR_GITHUB } from "../scripts/ssr/constants";
+import configs from "./configs";
+
+const page = configs.footer;
+---
+
+<footer class="flex justify-center z-[1]">
+    <p class="my-4 p-2 rounded-3xl bg-surface2 backdrop-blur-[20px]">
+        {page.message}
+        <a
+            href={AUTHOR_GITHUB}
+            rel="external"
+            target="_blank"
+            class="text-accent-color hover:underline">{AUTHOR}</a
+        >
+    </p>
+</footer>

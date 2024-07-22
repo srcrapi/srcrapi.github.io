@@ -1,0 +1,31 @@
+---
+import config from "../components/configs";
+import NavIcon from "./NavIcon.astro";
+
+const routes = ["about", "projects"];
+---
+
+<nav class="flex text-base text-white font-medium p-4">
+  <ul class="flex space-x-5">
+    <li>
+      <a
+        href="/"
+        class="relative after:transition-all after:ease-in-out after:duration-300 hover:after:w-full after:absolute after:w-[20%] after:h-[2px] after:rounded-full after:bg-white after:-bottom-[1px] after:left-0"
+        >{config.routes.home}</a
+      >
+    </li>
+    {
+      routes.map((route) => (
+        <li>
+          <a
+            href={`/${route}`}
+            class="relative after:transition-all after:ease-in-out after:duration-300 hover:after:w-full after:absolute after:w-[20%] after:h-[2px] after:rounded-full after:bg-white after:-bottom-[1px] after:left-0"
+          >
+            {config.routes[route]}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <NavIcon />
+</nav>
