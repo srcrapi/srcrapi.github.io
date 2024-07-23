@@ -13,7 +13,7 @@ export default {
     ],
     fullDescription:
       "I'm a software developer who's really loves linux and terminals",
-    altImage: "Profile picture image",
+    altImage: "Profile",
   },
   about: {
     title: "About",
@@ -25,6 +25,40 @@ export default {
     title: "Projects",
     description: "all my projects",
     banner: "url('/assets/img/Projects/hutao_cool.jpg')",
+  },
+  nijika: {
+    title: "Nijika",
+    description:
+      "O programa baseia-se em pegar imagens de um diretório e lista-las",
+    date: "Posted by rap1 on November 18, 2023",
+    banner: "url('/assets/img/Projects/banners/nijika-wallpaper.jpg')",
+    contents: [
+      "Usage",
+      "Example video",
+      "Errors",
+      "How-to-resolve",
+      "Issues",
+      "Conclusion",
+    ],
+    github: "https://github.com/srcrapi/NIJIKA",
+  },
+  ryo: {
+    title: "Ryo",
+    description:
+      "Ryo é um instalador de aplicativos para fazer uma instalação de um aplicativo desejado",
+    date: "Posted by rap1 on December 22, 2023",
+    banner: "url('/assets/img/Projects/banners/ryo_image.png')",
+    github: "https://github.com/srcrapi/ryo",
+    contents: ["Usage", "Previews", "Example video", "Issues", "Conclusion"],
+  },
+  kita: {
+    title: "Kita",
+    description:
+      "Kita é uma interface CLI feita para ajudar novos usuários do git.",
+    date: "Posted by rap1 on January 26, 2024",
+    banner: "url('/assets/img/Projects/banners/kita_image.jpg')",
+    github: "https://github.com/srcrapi/kita",
+    contents: ["Usage", "Previews", "Example video", "Issues", "Conclusion"],
   },
   footer: {
     message: "Made by",

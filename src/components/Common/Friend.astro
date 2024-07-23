@@ -1,0 +1,17 @@
+---
+interface Props {
+    name: string;
+    url: string;
+    alt: string;
+}
+
+const { name, url, alt } = Astro.props;
+---
+
+<a href={url} rel="external" target="_blank" class="p-[5px]">
+    <img
+        src={`https://github.com/${name}.png?size=256`}
+        alt={alt}
+        class="w-[68px] h-[68px] rounded-full border-2 border-solid border-primary hover:border-secondary hover:shadow-md hover:shadow-box-shadow"
+    />
+</a>

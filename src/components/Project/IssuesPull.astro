@@ -1,0 +1,26 @@
+---
+interface Props {
+    repoName: string;
+}
+
+const { repoName } = Astro.props;
+
+const basePath = "https://github.com/srcrapi/" + repoName;
+
+const repoCategories = ["issues", "pulls"];
+---
+
+{
+    repoCategories.map((category) => (
+        <li>
+            <a
+                href={basePath + `/${category}`}
+                rel="noreferrer"
+                target="_blank"
+                class="text-accent-color decoration-2 hover:underline"
+            >
+                {category === "pulls" ? "pull requests" : category}
+            </a>
+        </li>
+    ))
+}

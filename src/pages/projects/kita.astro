@@ -1,0 +1,131 @@
+---
+import ProjectsLayout from "../../layouts/ProjectsLayout.astro";
+import Information from "../../components/Common/Information.astro";
+import Alerts from "../../components/Common/Alerts.astro";
+import Code from "../../components/Common/Code.astro";
+import Examples from "../../components/Project/Examples.astro";
+import VideoDisplay from "../../components/Common/VideoDisplay.astro";
+import IssuesPull from "../../components/Project/IssuesPull.astro";
+import Github from "../../components/Icons/Github.astro";
+
+import configs from "../../components/configs";
+
+const page = configs.kita;
+---
+
+<ProjectsLayout name={page.title.toLowerCase()}>
+    <div class="flex justify-center">
+        <img
+            src="/assets/img/Projects/KITA-post/kita_smile.jpg"
+            alt="Kita smile"
+            class="w-[300px] my-5 rounded-3xl max-[800px]:w-48"
+        />
+    </div>
+
+    <Alerts alertName="Note" alertMessage="A documentação não está terminada" />
+
+    <p>
+        O objetivo de kita é de ser uma interface CLI para os comandos do git
+        facilitando assim o uso deles para quem ainda não está familiarizado.
+    </p>
+
+    <Github name={page.title.toLowerCase()} />
+
+    <h2 id="Usage">Usage</h2>
+
+    <Information text="É recomendado o uso do powershell" />
+
+    <p>Primeiro clone o repositório do github para uma pasta.</p>
+
+    <Code command="$ git clone https://github.com/srcrapi/kita.git" />
+
+    <p>
+        Depois de clonar o repositorio terá de entrar na pasta ryo depois na
+        pasta src
+    </p>
+
+    <Code command="$ cd .\\ryo\\src\\ryo" />
+
+    <p>Execute o main.py</p>
+
+    <Code command="$ python .\\main.py" />
+
+    <p>
+        E deverá ver algum input que pede a localização da pasta dos wallpapers,
+        vai ser preciso inserir a caminho completo da pasta onde contem todas as
+        imagens que deseja como wallpaper.
+    </p>
+
+    <h2 id="Previews">Previews:</h2>
+
+    <Examples
+        src="/assets/img/Projects/NIJIKA-post/Exemplo-Localizaçao.png"
+        alt="example-location"
+    />
+
+    <Examples
+        src="/assets/img/Projects/NIJIKA-post/Exemplo-caminho.png"
+        alt="Exemplo Caminho"
+    />
+
+    <Examples
+        src="/assets/img/Projects/NIJIKA-post/Exemplo-Lista.png"
+        alt="Exemplo lista"
+    />
+
+    <h2 id="Example-video">Video Exemplo</h2>
+
+    <VideoDisplay src="/assets/videos/How-Nijika-Works.mp4" />
+
+    <h2 id="Errors">Erros NIJIKA</h2>
+
+    <p>
+        Os erros que podem acontecer com NIJIKA é quando vamos colocar o caminho
+        do diretório onde estão os wallpapers e nos enganos sem querer ou por
+        colocar o caminho errado como está abaixo.
+    </p>
+
+    <Examples
+        src="/assets/img/Projects/NIJIKA-post/Erro-NIJIKA.png"
+        alt="Erro Nijika"
+    />
+
+    <p>
+        O erro acima foi porque não foi colocado o "Users" antes do username que
+        é uma parte essencial.
+    </p>
+
+    <h3 id="How-to-resolve">Como resolver ?</h3>
+
+    <p>
+        Podemos resolver este problema de uma maneira muito simples, abra o
+        explorer vá na pasta Documentos depois em NIJIKA e apague o arquivo
+        dentro dela ou altere colocando o caminho corretamente
+    </p>
+
+    <Examples
+        src="/assets/img/Projects/NIJIKA-post/Arquivo-NIJIKA.png"
+        alt="Arquivo NIJIKA"
+    />
+
+    <h2 id="Conclusion">Conclusão</h2>
+
+    <p>
+        O programa é focado para o público que gosta de alterar o wallpaper
+        constantemente (ou que têm vários) e querem alterar de uma vez e ver
+        qual eles vão querer usar desta vez sem precisarem clicar sempre com o
+        botão direito na imagem e selecionar como fundo com NIJIKA basta colocar
+        o número corresponde e o wallpaper irá ser alterado.
+    </p>
+
+    <h2 id="Issues">Problemas?</h2>
+
+    <p>
+        Se tiveres encontrado algum erro ou desejas fazer uma contribuição para
+        o codigo podes sempre abrir uma issue ou pull request.
+    </p>
+
+    <ul class="font-bold my-4 pl-[50px] list-disc">
+        <IssuesPull repoName="ryo" />
+    </ul>
+</ProjectsLayout>

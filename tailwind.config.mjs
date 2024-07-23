@@ -1,4 +1,4 @@
-import plugin from "tailwindcss";
+const plugin = require("tailwindcss/plugin");
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -13,21 +13,29 @@ export default {
         "black-semi-transparent": "rgba(0, 0, 0, 0.4)",
         surface1: "#303030",
         "surface1-semi-transparent": "#303030aa",
+        "surface1-semi-transparent2": "#303030bf",
         surface2: "rgba(36, 43, 57, 0.75)",
       },
       backgroundImage: {
         ryoBackground:
           "url('/assets/img/background_image/background-desktop.png')",
       },
+      backgroundPosition: {
+        "center-top": "center top",
+      },
       colors: {
         primary: "#e8e4f5",
         "accent-color": "#3c5ac9",
+        border: "rgba(205, 199, 229, 0.5)",
         info: "#5a5a5ad0",
         "box-shadow": "#ff9d9c88",
       },
       borderColor: {
         primary: "rgba(205, 199, 229, 0.5)",
         secondary: "#ff9d9c",
+      },
+      boxShadow: {
+        "blur-1": "0 0 12px",
       },
       keyframes: {
         scaleIn: {
@@ -69,7 +77,9 @@ export default {
             "animation-delay": value,
           }),
         },
-        { values: theme("animationDelay") },
+        {
+          values: theme("animationDelay"),
+        },
       );
     }),
   ],

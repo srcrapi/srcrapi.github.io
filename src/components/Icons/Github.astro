@@ -1,0 +1,25 @@
+---
+import configs from "../configs";
+
+interface Props {
+    name: string;
+}
+
+const { name } = Astro.props;
+const page = configs[name];
+---
+
+<div class="flex justify-center my-5">
+    <a
+        href={page.github}
+        target="_blank"
+        rel="external"
+        class="transition-all duration-300 ease-in-out hover:-translate-y-1"
+    >
+        <img
+            src="/assets/img/github-logo-light.png"
+            alt="github-logo"
+            class="w-16"
+        />
+    </a>
+</div>

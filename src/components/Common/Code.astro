@@ -1,0 +1,12 @@
+---
+interface Props {
+    command: string;
+}
+
+const { command } = Astro.props;
+---
+
+<div class="flex justify-center my-7">
+    <pre
+        class="w-2/5 overflow-x-auto rounded-md p-3 bg-surface2 max-[800px]:w-[90%]"><code class="text-sm tracking-[1px]">{command}</code></pre>
+</div>

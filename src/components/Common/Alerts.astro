@@ -1,0 +1,26 @@
+---
+interface Props {
+    alertName: string;
+    alertMessage: string;
+}
+
+const borderColors = {
+    note: "border-accent-color",
+};
+
+const textColors = {
+    note: "text-accent-color",
+};
+
+const { alertName, alertMessage } = Astro.props;
+
+const alertNameSm = alertName.toLowerCase();
+---
+
+<div
+    class={`my-6 pl-4 border-l-[3px] border-solid ${borderColors[alertNameSm]} text-primary`}
+>
+    <h3 class={`font-semibold ${textColors[alertNameSm]}`}>{alertName}</h3>
+
+    <p class="mt-1">{alertMessage}</p>
+</div>

@@ -1,0 +1,154 @@
+---
+import ProjectsLayout from "../../layouts/ProjectsLayout.astro";
+import Information from "../../components/Common/Information.astro";
+import Code from "../../components/Common/Code.astro";
+import Examples from "../../components/Project/Examples.astro";
+import VideoDisplay from "../../components/Common/VideoDisplay.astro";
+import IssuesPull from "../../components/Project/IssuesPull.astro";
+import Github from "../../components/Icons/Github.astro";
+
+import configs from "../../components/configs";
+
+const page = configs.nijika;
+---
+
+<ProjectsLayout name={page.title.toLowerCase()}>
+    <h2 class="text-2xl">NIJIKA. Script escrito em C</h2>
+
+    <div class="flex justify-center">
+        <img
+            src="/assets/img/Projects/NIJIKA-post/nijika-anjo.jpg"
+            alt="Nijika anjo"
+            class="w-[300px] my-5 rounded-3xl max-[800px]:w-48"
+        />
+    </div>
+
+    <p>
+        O objetivo de NIJIKA é de alterar o wallpaper baseado em um diretório
+        que é indicado pelo utilizador, fazendo uma listagem das imagens dentro
+        dele e dando a opção de escolher uma colocando ela como wallpaper, mesmo
+        se forem colocadas novas imagens ele atualizará os números de escolha em
+        outra sessão.
+    </p>
+
+    <Github name={page.title.toLowerCase()} />
+
+    <h2 id="Usage">Usage</h2>
+
+    <Information text="É recomendado o uso do powershell" />
+
+    <p>
+        Primeiro clone o repositório do github para uma pasta (Menos diretamente
+        nos Documentos).
+    </p>
+
+    <Code command="$ git clone https://github.com/srcrapi/NIJIKA.git" />
+
+    <p>
+        Depois de clonar o repositorio terá de entrar na pasta NIJIKA depois na
+        pasta bin
+    </p>
+
+    <Code command="$ cd .\\NIJIKA\bin" />
+
+    <p>Execute o NIJIKA.exe assim que estiver na pasta bin</p>
+
+    <Code command="$ .\\NIJIKA.exe" />
+
+    <p>
+        E deverá ver algum input que pede a localização da pasta dos wallpapers,
+        vai ser preciso inserir a caminho completo da pasta onde contem todas as
+        imagens que deseja como wallpaper.
+    </p>
+
+    <h3>Exemplo de localização:</h3>
+
+    <Examples
+        src="/assets/img/Projects/NIJIKA-post/Exemplo-Localizaçao.png"
+        alt="example-location"
+    />
+
+    <h3>Exemplo de caminho:</h3>
+
+    <Examples
+        src="/assets/img/Projects/NIJIKA-post/Exemplo-caminho.png"
+        alt="Exemplo Caminho"
+    />
+
+    <p>
+        Troque o "rafa1" pelo seu username e o caminho pelo o seu ficaria assim:
+    </p>
+
+    <Information text="C:\\Users\\username\\path" />
+
+    <p>
+        Uma vez que o caminho esteja colocado corretamente deve listar todas as
+        imagens que estão presentes no diretório que foi colocado:
+    </p>
+
+    <Examples
+        src="/assets/img/Projects/NIJIKA-post/Exemplo-Lista.png"
+        alt="Exemplo lista"
+    />
+
+    <p>
+        Agora só vai precisar digitar o número do wallpaper que quer e o
+        wallpaper vai se alterar automaticamente.
+    </p>
+
+    <h2 id="Example-video">Video Exemplo</h2>
+
+    <VideoDisplay src="/assets/videos/How-Nijika-Works.mp4" />
+
+    <h2 id="Errors">Erros NIJIKA</h2>
+
+    <p>
+        Os erros que podem acontecer com NIJIKA é quando vamos colocar o caminho
+        do diretório onde estão os wallpapers e nos enganos sem querer ou por
+        colocar o caminho errado como está abaixo.
+    </p>
+
+    <Examples
+        src="/assets/img/Projects/NIJIKA-post/Erro-NIJIKA.png"
+        alt="Erro Nijika"
+    />
+
+    <p>
+        O erro acima foi porque não foi colocado o "Users" antes do username que
+        é uma parte essencial.
+    </p>
+
+    <h3 id="How-to-resolve">Como resolver ?</h3>
+
+    <p>
+        Podemos resolver este problema de uma maneira muito simples, abra o
+        explorer vá na pasta Documentos depois em NIJIKA e apague o arquivo
+        dentro dela ou altere colocando o caminho corretamente
+    </p>
+
+    <Examples
+        src="/assets/img/Projects/NIJIKA-post/Arquivo-NIJIKA.png"
+        alt="Arquivo NIJIKA"
+    />
+
+    <h2 id="Conclusion">Conclusão</h2>
+
+    <p>
+        O programa é focado para o público que gosta de alterar o wallpaper
+        constantemente (ou que têm vários) e querem alterar de uma vez e ver
+        qual eles vão querer usar desta vez sem precisarem clicar sempre com o
+        botão direito na imagem e selecionar como fundo com NIJIKA basta colocar
+        o número corresponde e o wallpaper irá ser alterado.
+    </p>
+
+    <h2 id="Issues">Problemas?</h2>
+
+    <p>
+        Se tiveres encontrado algum erro ou desejas fazer uma contribuição para
+        o codigo podes sempre abrir uma issue ou pull request.
+    </p>
+
+    <ul class="font-bold my-4 pl-[50px] list-disc">
+        <IssuesPull repoName="nijika" />
+    </ul>
+</ProjectsLayout>

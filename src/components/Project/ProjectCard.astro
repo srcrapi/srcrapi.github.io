@@ -1,0 +1,36 @@
+---
+import configs from "../configs";
+
+interface Props {
+    path: string;
+    name: string;
+}
+
+const { path, name } = Astro.props;
+
+const page = configs[name];
+const banner = page.banner;
+---
+
+<a
+    href={path}
+    class="w-96 h-auto bg-image bg-surface1 bg-cover bg-center-top bg-y-12px bg-blend-overlay bg-no-repeat border-2 border-solid border-primary rounded-xl text-primary m-3 transition-[background-color] duration-500 ease-in-out hover:bg-surface1-semi-transparent2 hover:shadow-blur-1 hover:shadow-black"
+>
+    <div class="flex flex-col grow m-4">
+        <h2 class="m-0 text-[20px] leading-[17px] font-bold">{page.title}</h2>
+
+        <p class="mt-3 text-sm leading-4">{page.description}</p>
+
+        <span class="text-sm mt-4 leading-3">{page.date}</span>
+    </div>
+</a>
+
+<style define:vars={{ banner }}>
+    .bg-image {
+        background-image: var(--banner);
+    }
+
+    .bg-y-12px {
+        background-position-y: -12px;
+    }
+</style>

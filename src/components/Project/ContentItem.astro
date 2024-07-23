@@ -1,0 +1,23 @@
+---
+import configs from "../configs";
+
+interface Props {
+    name: string;
+}
+
+const { name } = Astro.props;
+const page = configs[name];
+---
+
+{
+    page["contents"].map((content: string) => (
+        <li>
+            <a
+                href={"#" + content.replace(" ", "-")}
+                class="relative inline-block pl-4 text-primary font-medium transition-all duration-700 ease-in-out before:content-['#'] before:absolute before:left-0 before:opacity-0 before:font-bold before:text-border before:transition-opacity before:duration-300 ease hover:before:opacity-100"
+            >
+                {content}
+            </a>
+        </li>
+    ))
+}

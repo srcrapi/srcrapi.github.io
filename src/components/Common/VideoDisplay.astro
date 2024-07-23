@@ -1,0 +1,13 @@
+---
+interface Props {
+    src: string;
+}
+
+const { src } = Astro.props;
+---
+
+<div class="flex justify-center">
+    <video controls class="my-8 w-2/3 h-auto rounded-lg max-[800px]:w-[90%]">
+        <source src={src} type="video/mp4" />
+    </video>
+</div>

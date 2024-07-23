@@ -8,21 +8,21 @@ const page = configs.home;
 ---
 
 <Layout title={page.title} description={page.fullDescription}>
-  <main class="h-full flex justify-center items-center grow">
-    <section
-      class="flex justify-between items-center bg-surface2 rounded-3xl py-10 px-20 gap-5 backdrop-blur-lg animate-scaleIn"
-    >
-      <div
-        class="overflow-hidden mr-8 border-4 border-solid border-primary rounded-full"
-      >
-        <img
-          src="/assets/img/pfp/ryo_neutral.jpg"
-          alt={page.altImage}
-          class="block w-64 h-full object-cover transition-all duration-500 ease-in-out hover:scale-110"
-        />
-      </div>
+    <main class="h-full flex justify-center items-center grow">
+        <section
+            class="flex justify-between items-center bg-surface2 rounded-3xl py-10 px-20 gap-5 backdrop-blur-lg animate-scaleIn max-[860px]:flex-col max-[550px]:py-5 max-[550px]:px-6"
+        >
+            <div
+                class="overflow-hidden mr-8 border-4 border-solid border-primary rounded-full max-[860px]:mr-0"
+            >
+                <img
+                    src="/assets/img/pfp/ryo_neutral.jpg"
+                    alt={page.altImage}
+                    class="block w-64 h-full object-cover transition-all duration-700 ease-in-out hover:scale-110 max-[550px]:w-52"
+                />
+            </div>
 
-      <Menu />
-    </section>
-  </main>
+            <Menu />
+        </section>
+    </main>
 </Layout>

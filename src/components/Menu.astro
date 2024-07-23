@@ -7,13 +7,13 @@ import { AUTHOR } from "../scripts/ssr/constants";
 const page = configs.home;
 ---
 
-<div class="text-primary">
-    <h1 class="text-4xl font-bold">
+<div>
+    <h1 class="text-4xl font-bold max-[860px]:text-[28px]">
         {page.message}
         <span class="text-accent-color">{AUTHOR}</span>
     </h1>
 
-    <p class="leading-6">
+    <p class="leading-6 max-[550px]:text-sm">
         {
             page.description.map((message: string, index) => (
                 <>
@@ -25,7 +25,7 @@ const page = configs.home;
         }
     </p>
 
-    <ul class="flex list-none mt-6 gap-4">
+    <ul class="flex list-none mt-6 gap-4 max-[860px]:justify-center">
         <SocialIcons
             url="https://github.com/srcrapi"
             name="fa-brands fa-github fa-2xl"

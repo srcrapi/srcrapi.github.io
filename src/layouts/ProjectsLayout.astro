@@ -1,0 +1,73 @@
+---
+import BannerLayout from "../layouts/BannerLayout.astro";
+import ContentItem from "../components/Project/ContentItem.astro";
+
+import configs from "../components/configs";
+
+interface Props {
+    name: string;
+}
+
+const { name } = Astro.props;
+const page = configs[name];
+---
+
+<BannerLayout
+    title={page.title}
+    description={page.description}
+    banner={page.banner}
+    projectsContent={true}
+>
+    <section slot="header" class="text-center p-20">
+        <h1 class="text-[2.5rem] font-bold">{page.title}</h1>
+    </section>
+
+    <section
+        class="grow py-5 px-[50px] max-[800px]:py-[10px] max-[800px]:px-3 max-[800px]:w-full"
+    >
+        <slot />
+
+        <div class="flex justify-center">
+            <a
+                href="/projects"
+                class="bg-surface1 text-primary p-[10px] rounded-lg my-6 font-bold transiiton-[background-color] duration-500 ease-in-out hover:bg-surface1-semi-transparent"
+                >Back</a
+            >
+        </div>
+    </section>
+
+    <section
+        class="sticky top-8 w-96 h-fit mt-[30px] px-5 pr-7 border-l-[1px] border-solid border-primary max-[800px]:hidden"
+    >
+        <h2 class="text-[20px] mb-[10px] font-bold">Contents</h2>
+
+        <nav>
+            <ul class="leading-7 text-base">
+                <ContentItem name={name} />
+            </ul>
+        </nav>
+    </section>
+</BannerLayout>
+
+<style is:global>
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    p {
+        margin: 15px 0;
+    }
+
+    @media screen and (max-width: 800px) {
+        p {
+            font-size: 14px;
+        }
+    }
+</style>

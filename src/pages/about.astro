@@ -1,8 +1,8 @@
 ---
 import BannerLayout from "../layouts/BannerLayout.astro";
-import InterestsList from "../components/InterestItems.astro";
+import InterestsList from "../components/Common/InterestItems.astro";
 import TechStack from "../components/TechStack.astro";
-import Friend from "../components/Friend.astro";
+import Friend from "../components/Common/Friend.astro";
 
 import configs from "../components/configs";
 
@@ -10,77 +10,77 @@ const page = configs.about;
 ---
 
 <BannerLayout
-  title={page.title}
-  description={page.description}
-  banner={page.banner}
-  attachment={true}
+    title={page.title}
+    description={page.description}
+    banner={page.banner}
+    attachment={true}
 >
-  <section slot="header" class="text-center p-20">
-    <h1 class="text-[2.5rem] font-bold">{page.title}</h1>
-  </section>
+    <section slot="header" class="text-center p-20">
+        <h1 class="text-[2.5rem] font-bold">{page.title}</h1>
+    </section>
 
-  <section>
-    <h1 class="text-[2rem] font-bold">Me</h1>
+    <section>
+        <h1 class="text-[2rem] font-bold">Me</h1>
 
-    <p>{page.description}</p>
-  </section>
-  <section>
-    <h2>Interests</h2>
+        <p>{page.description}</p>
+    </section>
+    <section>
+        <h2>Interests</h2>
 
-    <ul class="flex flex-wrap list-none gap-4 leading-5">
-      <InterestsList interest="Sleep and eat" />
-      <InterestsList interest="Games" />
-      <InterestsList interest="Bass music" />
-      <InterestsList interest="Coding" />
-      <InterestsList interest="Linux" />
-      <InterestsList interest="Home & Relax" />
-    </ul>
-  </section>
-  <section>
-    <h2>Tech</h2>
+        <ul class="flex flex-wrap list-none gap-4 leading-5">
+            <InterestsList interest="Sleep and eat" />
+            <InterestsList interest="Games" />
+            <InterestsList interest="Bass music" />
+            <InterestsList interest="Coding" />
+            <InterestsList interest="Linux" />
+            <InterestsList interest="Home & Relax" />
+        </ul>
+    </section>
+    <section>
+        <h2>Tech</h2>
 
-    <TechStack />
-  </section>
-  <section class="flex flex-col items-center justify-center mt-8">
-    <h2>Projects</h2>
+        <TechStack />
+    </section>
+    <section class="flex flex-col items-center justify-center mt-8">
+        <h2>Projects</h2>
 
-    <a
-      href="/projects"
-      class="my-[5px] transition-all duration-300 ease-in-out hover:-translate-y-1"
-    >
-      <img
-        src="/assets/img/About/hutao-chibi-book.png"
-        alt="alt Projects link"
-        class="w-[100px] h-[100px]"
-      />
-    </a>
-  </section>
-  <section>
-    <h2>Friends</h2>
+        <a
+            href="/projects"
+            class="my-[5px] transition-all duration-300 ease-in-out hover:-translate-y-1"
+        >
+            <img
+                src="/assets/img/About/hutao-chibi-book.png"
+                alt="alt Projects link"
+                class="w-[100px] h-[100px]"
+            />
+        </a>
+    </section>
+    <section>
+        <h2>Friends</h2>
 
-    <article class="flex flex-wrap mt-4">
-      <Friend
-        name="rovierr"
-        url="https://rovierr.github.io"
-        alt="my brother's site"
-      />
-      <Friend
-        name="ThiagoCelvet"
-        url="https://github.com/ThiagoCelvet"
-        alt="celvet's site"
-      />
-    </article>
-  </section>
+        <article class="flex flex-wrap mt-4 max-[800px]:justify-center">
+            <Friend
+                name="rovierr"
+                url="https://rovierr.github.io"
+                alt="my brother's site"
+            />
+            <Friend
+                name="ThiagoCelvet"
+                url="https://github.com/ThiagoCelvet"
+                alt="celvet's site"
+            />
+        </article>
+    </section>
 </BannerLayout>
 
 <style>
-  h2 {
-    margin: 20px 0;
-    font-weight: bold;
-    font-size: 24px;
-  }
+    h2 {
+        margin: 20px 0;
+        font-weight: bold;
+        font-size: 24px;
+    }
 
-  p {
-    margin: 16px 0;
-  }
+    p {
+        margin: 16px 0;
+    }
 </style>

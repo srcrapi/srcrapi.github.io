@@ -1,6 +1,6 @@
 ---
 import BannerLayout from "../layouts/BannerLayout.astro";
-import ProjectCard from "../components/ProjectCard.astro";
+import ProjectCard from "../components/Project/ProjectCard.astro";
 
 import configs from "../components/configs";
 
@@ -8,15 +8,17 @@ const page = configs.projects;
 ---
 
 <BannerLayout
-  title={page.title}
-  description={page.description}
-  banner={page.banner}
+    title={page.title}
+    description={page.description}
+    banner={page.banner}
 >
-  <section slot="header" class="text-center p-20">
-    <h1 class="text-[2.5rem] font-bold">{page.title}</h1>
-  </section>
+    <section slot="header" class="text-center p-20">
+        <h1 class="text-[2.5rem] font-bold">{page.title}</h1>
+    </section>
 
-  <section>
-    <ProjectCard url="/projects/nijika" />
-  </section>
+    <section class="flex justify-center flex-wrap overflow-hidden">
+        <ProjectCard path="/projects/nijika" name="nijika" />
+        <ProjectCard path="/projects/ryo" name="ryo" />
+        <ProjectCard path="/projects/kita" name="kita" />
+    </section>
 </BannerLayout>
