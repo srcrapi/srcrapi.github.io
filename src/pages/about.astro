@@ -4,6 +4,7 @@ import InterestsList from "../components/Common/InterestItems.astro";
 import TechStack from "../components/TechStack.astro";
 import Friend from "../components/Common/Friend.astro";
 
+import { AUTHOR } from "../scripts/ssr/constants";
 import configs from "../scripts/ssr/configs";
 
 const page = configs.about;
@@ -54,6 +55,18 @@ const page = configs.about;
                 class="w-[100px] h-[100px]"
             />
         </a>
+    </section>
+    <section>
+        <h2>Discord</h2>
+
+        <iframe
+            title={AUTHOR + "'s discord"}
+            width="340"
+            height="120"
+            frameborder="0"
+            sandbox="allow-scripts"
+            src="https://widgets.vendicated.dev/user?id=535152853560328202&theme=dark&banner=true&full-banner=false&rounded-corners=true&discord-icon=true&badges=true&guess-nitro=false&"
+        ></iframe>
     </section>
     <section>
         <h2>Friends</h2>
